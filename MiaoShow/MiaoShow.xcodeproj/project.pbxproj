@@ -20,6 +20,7 @@
 		642E97671E975E5A00C4F6EA /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E97661E975E5A00C4F6EA /* ShowViewController.swift */; };
 		642E97691E975E6300C4F6EA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E97681E975E6300C4F6EA /* GameViewController.swift */; };
 		642E976B1E975E6A00C4F6EA /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E976A1E975E6A00C4F6EA /* MeViewController.swift */; };
+		642E976D1E9761DE00C4F6EA /* Bundle+XMExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E976C1E9761DE00C4F6EA /* Bundle+XMExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		642E97661E975E5A00C4F6EA /* ShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 		642E97681E975E6300C4F6EA /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		642E976A1E975E6A00C4F6EA /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		642E976C1E9761DE00C4F6EA /* Bundle+XMExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+XMExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 		642E97551E97570600C4F6EA /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				642E976C1E9761DE00C4F6EA /* Bundle+XMExtension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				642E975A1E97570600C4F6EA /* ViewController.swift in Sources */,
 				642E975D1E97577D00C4F6EA /* XMTabBarController.swift in Sources */,
 				642E97631E975E3100C4F6EA /* LiveViewController.swift in Sources */,
+				642E976D1E9761DE00C4F6EA /* Bundle+XMExtension.swift in Sources */,
 				642E97331E9755D200C4F6EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
