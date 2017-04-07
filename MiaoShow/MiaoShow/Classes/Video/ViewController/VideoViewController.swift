@@ -1,6 +1,5 @@
-
 //
-//  XMBaseViewController.swift
+//  VideoViewController.swift
 //  MiaoShow
 //
 //  Created by  Mazy on 2017/4/7.
@@ -9,13 +8,10 @@
 
 import UIKit
 
-class XMBaseViewController: UIViewController {
+class VideoViewController: XMBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
 
         // Do any additional setup after loading the view.
     }
