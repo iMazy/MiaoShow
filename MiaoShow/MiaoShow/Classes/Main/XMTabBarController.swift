@@ -36,7 +36,7 @@ class XMTabBarController: UITabBarController {
             vc.tabBarItem.selectedImage = UIImage(named: image + "_sel")?.withRenderingMode(.alwaysOriginal)
         }
         vc.tabBarItem.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
-        let nav = UINavigationController(rootViewController: vc)
+        let nav = XMNavigationController(rootViewController: vc)
         self.addChildViewController(nav)
         
     }

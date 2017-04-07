@@ -12,6 +12,8 @@ class XMNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationBar.barTintColor = UIColor.init(colorLiteralRed: 255/255.0, green: 46/255.0, blue: 148/255.0, alpha: 1.0)
 
         // Do any additional setup after loading the view.
     }
