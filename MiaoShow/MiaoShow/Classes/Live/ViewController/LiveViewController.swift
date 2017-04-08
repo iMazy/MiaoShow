@@ -24,6 +24,8 @@ class LiveViewController: XMBaseViewController {
     }()
     
     var currentOffsetY: CGFloat?
+    
+    lazy var liveViewModel = LiveViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +44,13 @@ class LiveViewController: XMBaseViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"head_crown")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(search))
         
+        liveViewModel.loadListData(complite: {()->() in
+            self.tableView.reloadData()
+        })
     }
     
     @objc func search() {
+        
         
     }
     
@@ -58,12 +64,12 @@ class LiveViewController: XMBaseViewController {
 
 extension LiveViewController:UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return self.liveViewModel.liveList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID)
-        cell?.textLabel?.text = "ddafagaga"
+        cell?.textLabel?.text = self.liveViewModel.liveList[indexPath.row].myname
         return cell!
     }
 }

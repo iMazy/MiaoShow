@@ -8,9 +8,33 @@
 
 import UIKit
 
+import Alamofire
+import MJExtension
+
 class LiveViewModel: NSObject {
     
-    var livs: LiveModel?
+    lazy var liveList = [LiveModel]()
+    
+    func loadListData(complite:@escaping ()->()) {
+        
+        Alamofire.request("http://live.9158.com/Fans/GetHotLive?page=1").responseJSON { (response) in
+            if let JSON:[String:AnyObject] = response.result.value as! [String : AnyObject]? {
+                
+                let array = JSON["data"]?["list"] as! [[String: AnyObject]]
+        
+                for list in array {
+                    let model = LiveModel.mj_object(withKeyValues: list)
+                    self.liveList.append(model!)
+                }
+                
+            }
+            
+            complite()
+        }
+        
+    }
+    
+    
     
     
 }
