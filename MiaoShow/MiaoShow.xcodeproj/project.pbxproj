@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5821C69C7A3605A2A1F837C0 /* Pods_MiaoShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C5194BD420097DBAD71A9C /* Pods_MiaoShow.framework */; };
 		642E97331E9755D200C4F6EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E97321E9755D200C4F6EA /* AppDelegate.swift */; };
 		642E97381E9755D200C4F6EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642E97361E9755D200C4F6EA /* Main.storyboard */; };
 		642E973A1E9755D200C4F6EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642E97391E9755D200C4F6EA /* Assets.xcassets */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		282ED6135D137F07F1F7D32A /* Pods-MiaoShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiaoShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiaoShow/Pods-MiaoShow.debug.xcconfig"; sourceTree = "<group>"; };
+		5F41D183F8A704B7D2D76CD3 /* Pods-MiaoShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiaoShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiaoShow/Pods-MiaoShow.release.xcconfig"; sourceTree = "<group>"; };
 		642E972F1E9755D200C4F6EA /* MiaoShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiaoShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		642E97321E9755D200C4F6EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		642E97371E9755D200C4F6EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		64FDFF791E987994003AB388 /* LiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTableViewCell.xib; sourceTree = "<group>"; };
 		64FDFF7C1E988C3C003AB388 /* LiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveModel.swift; sourceTree = "<group>"; };
 		64FDFF7E1E988C49003AB388 /* LiveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewModel.swift; sourceTree = "<group>"; };
+		97C5194BD420097DBAD71A9C /* Pods_MiaoShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiaoShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +59,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5821C69C7A3605A2A1F837C0 /* Pods_MiaoShow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2368EACB2C50253ABEE3843D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97C5194BD420097DBAD71A9C /* Pods_MiaoShow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		642E97261E9755D100C4F6EA = {
 			isa = PBXGroup;
 			children = (
 				642E97311E9755D200C4F6EA /* MiaoShow */,
 				642E97301E9755D200C4F6EA /* Products */,
+				9BA565AC05A7323A3A9C773F /* Pods */,
+				2368EACB2C50253ABEE3843D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -279,6 +294,15 @@
 			name = System;
 			sourceTree = "<group>";
 		};
+		9BA565AC05A7323A3A9C773F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				282ED6135D137F07F1F7D32A /* Pods-MiaoShow.debug.xcconfig */,
+				5F41D183F8A704B7D2D76CD3 /* Pods-MiaoShow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,9 +310,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 642E97411E9755D200C4F6EA /* Build configuration list for PBXNativeTarget "MiaoShow" */;
 			buildPhases = (
+				481CE5AA9BC47A957CB4A7BA /* [CP] Check Pods Manifest.lock */,
 				642E972B1E9755D200C4F6EA /* Sources */,
 				642E972C1E9755D200C4F6EA /* Frameworks */,
 				642E972D1E9755D200C4F6EA /* Resources */,
+				8540854E653452260B4225AA /* [CP] Embed Pods Frameworks */,
+				E9FC2FD8C6D12649B5D6ADDE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,6 +373,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		481CE5AA9BC47A957CB4A7BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8540854E653452260B4225AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiaoShow/Pods-MiaoShow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9FC2FD8C6D12649B5D6ADDE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiaoShow/Pods-MiaoShow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		642E972B1E9755D200C4F6EA /* Sources */ = {
@@ -484,6 +559,7 @@
 		};
 		642E97421E9755D200C4F6EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 282ED6135D137F07F1F7D32A /* Pods-MiaoShow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -498,6 +574,7 @@
 		};
 		642E97431E9755D200C4F6EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F41D183F8A704B7D2D76CD3 /* Pods-MiaoShow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
