@@ -36,9 +36,18 @@ class LiveViewController: XMBaseViewController {
         
         view.addSubview(tableView)
         
+        navigationItem.title = "广场"
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"search_head")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(search))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"head_crown")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(search))
         
     }
+    
+    @objc func search() {
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
