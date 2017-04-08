@@ -23,6 +23,8 @@
 		642E976D1E9761DE00C4F6EA /* Bundle+XMExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E976C1E9761DE00C4F6EA /* Bundle+XMExtension.swift */; };
 		64FDFF7A1E987994003AB388 /* LiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF781E987994003AB388 /* LiveTableViewCell.swift */; };
 		64FDFF7B1E987994003AB388 /* LiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FDFF791E987994003AB388 /* LiveTableViewCell.xib */; };
+		64FDFF7D1E988C3C003AB388 /* LiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF7C1E988C3C003AB388 /* LiveModel.swift */; };
+		64FDFF7F1E988C49003AB388 /* LiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF7E1E988C49003AB388 /* LiveViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		642E976C1E9761DE00C4F6EA /* Bundle+XMExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+XMExtension.swift"; sourceTree = "<group>"; };
 		64FDFF781E987994003AB388 /* LiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTableViewCell.swift; sourceTree = "<group>"; };
 		64FDFF791E987994003AB388 /* LiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTableViewCell.xib; sourceTree = "<group>"; };
+		64FDFF7C1E988C3C003AB388 /* LiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveModel.swift; sourceTree = "<group>"; };
+		64FDFF7E1E988C49003AB388 /* LiveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 		642E974B1E97570600C4F6EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				64FDFF7C1E988C3C003AB388 /* LiveModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 		642E974D1E97570600C4F6EA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				64FDFF7E1E988C49003AB388 /* LiveViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -352,9 +358,11 @@
 				642E975F1E97579800C4F6EA /* XMNavigationController.swift in Sources */,
 				642E97671E975E5A00C4F6EA /* ShowViewController.swift in Sources */,
 				642E97691E975E6300C4F6EA /* GameViewController.swift in Sources */,
+				64FDFF7F1E988C49003AB388 /* LiveViewModel.swift in Sources */,
 				642E975A1E97570600C4F6EA /* ViewController.swift in Sources */,
 				642E975D1E97577D00C4F6EA /* XMTabBarController.swift in Sources */,
 				642E97631E975E3100C4F6EA /* LiveViewController.swift in Sources */,
+				64FDFF7D1E988C3C003AB388 /* LiveModel.swift in Sources */,
 				64FDFF7A1E987994003AB388 /* LiveTableViewCell.swift in Sources */,
 				642E976D1E9761DE00C4F6EA /* Bundle+XMExtension.swift in Sources */,
 				642E97331E9755D200C4F6EA /* AppDelegate.swift in Sources */,

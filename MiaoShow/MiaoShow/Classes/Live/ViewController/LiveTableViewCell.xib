@@ -83,7 +83,15 @@
                     <constraint firstItem="xNc-Lp-gvG" firstAttribute="bottom" secondItem="N5S-ND-Dz0" secondAttribute="bottom" constant="-5" id="zdQ-XI-i9n"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="-36" y="163.5"/>
+            <connections>
+                <outlet property="anchorGpsLabel" destination="Clt-5t-t7K" id="yez-4q-tDT"/>
+                <outlet property="anchorIconView" destination="N5S-ND-Dz0" id="0kn-GH-j5I"/>
+                <outlet property="anchorImageView" destination="eT7-hv-9aO" id="2Ub-cX-Zbn"/>
+                <outlet property="anchorNameLabel" destination="1Mw-Kh-yyl" id="Dsj-na-mOe"/>
+                <outlet property="anchorStarImage" destination="y2b-V6-aID" id="p0E-oe-PDS"/>
+                <outlet property="viewdNumLabel" destination="1ir-Uj-vOQ" id="hwF-b5-IL2"/>
+            </connections>
+            <point key="canvasLocation" x="-3" y="165"/>
         </tableViewCell>
     </objects>
     <resources>

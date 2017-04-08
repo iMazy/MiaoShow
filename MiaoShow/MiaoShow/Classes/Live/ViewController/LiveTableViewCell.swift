@@ -11,6 +11,18 @@ import UIKit
 class LiveTableViewCell: UITableViewCell {
 
     
+    /// 主播封面图片
+    @IBOutlet weak var anchorImageView: UIImageView!
+    /// 主播图像
+    @IBOutlet weak var anchorIconView: UIImageView!
+    /// 主播昵称
+    @IBOutlet weak var anchorNameLabel: UILabel!
+    /// 主播位置
+    @IBOutlet weak var anchorGpsLabel: UILabel!
+    /// 直播的等级
+    @IBOutlet weak var anchorStarImage: UIImageView!
+    /// 当前观看人数
+    @IBOutlet weak var viewdNumLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
