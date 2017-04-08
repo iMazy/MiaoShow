@@ -22,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = XMTabBarController()
         window?.makeKeyAndVisible()
         
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         return true
     }
 
