@@ -8,7 +8,7 @@
 
 import UIKit
 
-let cellID = "MAZY"
+let liveCellID = "homeLiveCell"
 let screenH = UIScreen.main.bounds.height
 
 class LiveViewController: XMBaseViewController {
@@ -34,9 +34,13 @@ class LiveViewController: XMBaseViewController {
         // 取消顶部自动约束
         automaticallyAdjustsScrollViewInsets = false
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        tableView.register(UINib.init(nibName: "LiveTableViewCell", bundle: nil), forCellReuseIdentifier: liveCellID)
         
         view.addSubview(tableView)
+        
+        tableView.rowHeight = view.bounds.width + 60
+        // 取消分割线
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
         navigationItem.title = "广场"
         
@@ -68,9 +72,9 @@ extension LiveViewController:UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID)
-        cell?.textLabel?.text = self.liveViewModel.liveList[indexPath.row].myname
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: liveCellID) as! LiveTableViewCell
+        cell.liveModel = self.liveViewModel.liveList[indexPath.row]
+        return cell
     }
 }
 

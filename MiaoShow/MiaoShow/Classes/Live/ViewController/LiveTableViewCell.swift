@@ -7,9 +7,21 @@
 //
 
 import UIKit
+import SDWebImage
 
 class LiveTableViewCell: UITableViewCell {
-
+    
+    var liveModel: LiveModel? {
+        didSet {
+            anchorImageView.sd_setImage(with: URL(string: (liveModel?.bigpic)!))
+            anchorIconView.sd_setImage(with: URL(string:(liveModel?.smallpic)!), placeholderImage: UIImage(named:"placeholder_head"))
+            
+            anchorNameLabel.text = liveModel?.myname ?? ""
+            anchorGpsLabel.text = liveModel?.gps ?? ""
+            viewdNumLabel.text = "\(liveModel?.allnum ?? 0)"
+            
+        }
+    }
     
     /// 主播封面图片
     @IBOutlet weak var anchorImageView: UIImageView!
