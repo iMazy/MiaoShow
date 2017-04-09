@@ -22,6 +22,9 @@
 		642E97691E975E6300C4F6EA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E97681E975E6300C4F6EA /* GameViewController.swift */; };
 		642E976B1E975E6A00C4F6EA /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E976A1E975E6A00C4F6EA /* MeViewController.swift */; };
 		642E976D1E9761DE00C4F6EA /* Bundle+XMExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E976C1E9761DE00C4F6EA /* Bundle+XMExtension.swift */; };
+		645CB63E1E9A6C57008B6671 /* LiveShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645CB63D1E9A6C57008B6671 /* LiveShowViewController.swift */; };
+		645CB6401E9A6C7F008B6671 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645CB63F1E9A6C7F008B6671 /* IJKMediaFramework.framework */; };
+		645CB6421E9A6CAF008B6671 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 645CB6411E9A6CAF008B6671 /* libz.tbd */; };
 		64FDFF7A1E987994003AB388 /* LiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF781E987994003AB388 /* LiveTableViewCell.swift */; };
 		64FDFF7B1E987994003AB388 /* LiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FDFF791E987994003AB388 /* LiveTableViewCell.xib */; };
 		64FDFF7D1E988C3C003AB388 /* LiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF7C1E988C3C003AB388 /* LiveModel.swift */; };
@@ -47,6 +50,9 @@
 		642E97681E975E6300C4F6EA /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		642E976A1E975E6A00C4F6EA /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		642E976C1E9761DE00C4F6EA /* Bundle+XMExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+XMExtension.swift"; sourceTree = "<group>"; };
+		645CB63D1E9A6C57008B6671 /* LiveShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveShowViewController.swift; sourceTree = "<group>"; };
+		645CB63F1E9A6C7F008B6671 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		645CB6411E9A6CAF008B6671 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		64FDFF781E987994003AB388 /* LiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTableViewCell.swift; sourceTree = "<group>"; };
 		64FDFF791E987994003AB388 /* LiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTableViewCell.xib; sourceTree = "<group>"; };
 		64FDFF7C1E988C3C003AB388 /* LiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveModel.swift; sourceTree = "<group>"; };
@@ -59,7 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				645CB6421E9A6CAF008B6671 /* libz.tbd in Frameworks */,
 				5821C69C7A3605A2A1F837C0 /* Pods_MiaoShow.framework in Frameworks */,
+				645CB6401E9A6C7F008B6671 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +77,7 @@
 		2368EACB2C50253ABEE3843D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				645CB6411E9A6CAF008B6671 /* libz.tbd */,
 				97C5194BD420097DBAD71A9C /* Pods_MiaoShow.framework */,
 			);
 			name = Frameworks;
@@ -178,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				642E97621E975E3100C4F6EA /* LiveViewController.swift */,
+				645CB63D1E9A6C57008B6671 /* LiveShowViewController.swift */,
 				64FDFF781E987994003AB388 /* LiveTableViewCell.swift */,
 				64FDFF791E987994003AB388 /* LiveTableViewCell.xib */,
 			);
@@ -298,6 +308,7 @@
 		645CB63C1E9A6BB5008B6671 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				645CB63F1E9A6C7F008B6671 /* IJKMediaFramework.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -440,6 +451,7 @@
 				642E97651E975E4200C4F6EA /* VideoViewController.swift in Sources */,
 				642E975F1E97579800C4F6EA /* XMNavigationController.swift in Sources */,
 				642E97671E975E5A00C4F6EA /* ShowViewController.swift in Sources */,
+				645CB63E1E9A6C57008B6671 /* LiveShowViewController.swift in Sources */,
 				642E97691E975E6300C4F6EA /* GameViewController.swift in Sources */,
 				64FDFF7F1E988C49003AB388 /* LiveViewModel.swift in Sources */,
 				642E975A1E97570600C4F6EA /* ViewController.swift in Sources */,
@@ -571,6 +583,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MiaoShow/Classes/Frameworks",
+				);
 				INFOPLIST_FILE = MiaoShow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -586,6 +602,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MiaoShow/Classes/Frameworks",
+				);
 				INFOPLIST_FILE = MiaoShow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

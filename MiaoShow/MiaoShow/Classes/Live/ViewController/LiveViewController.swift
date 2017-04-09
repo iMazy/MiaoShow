@@ -76,6 +76,13 @@ extension LiveViewController:UITableViewDataSource,UITableViewDelegate {
         cell.liveModel = self.liveViewModel.liveList[indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = self.liveViewModel.liveList[indexPath.row]
+        let showVC = LiveShowViewController()
+        showVC.liveModel = model
+        show(showVC, sender: nil)
+    }
 }
 
 
