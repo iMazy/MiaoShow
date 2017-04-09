@@ -19,7 +19,8 @@ class LiveShowViewController: XMBaseViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor.red
+        
+        print(liveModel?.flv ?? "5555")
         
         playWithFLV(flv: (liveModel?.flv)!)
         
@@ -28,6 +29,13 @@ class LiveShowViewController: XMBaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+         moviePlayer?.shutdown()
+        moviePlayer?.view.removeFromSuperview()
+        moviePlayer = nil
+        
     }
     
     override func didReceiveMemoryWarning() {
