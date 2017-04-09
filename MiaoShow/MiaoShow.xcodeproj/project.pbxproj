@@ -104,6 +104,7 @@
 		642E97441E97570600C4F6EA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				645CB63C1E9A6BB5008B6671 /* Frameworks */,
 				642E974E1E97570600C4F6EA /* Main */,
 				642E974A1E97570600C4F6EA /* Live */,
 				642E97561E97570600C4F6EA /* Video */,
@@ -292,6 +293,13 @@
 				642E973E1E9755D200C4F6EA /* Info.plist */,
 			);
 			name = System;
+			sourceTree = "<group>";
+		};
+		645CB63C1E9A6BB5008B6671 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		9BA565AC05A7323A3A9C773F /* Pods */ = {
