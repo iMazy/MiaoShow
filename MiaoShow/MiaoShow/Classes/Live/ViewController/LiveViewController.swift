@@ -58,6 +58,12 @@ class LiveViewController: XMBaseViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if (navigationController?.toolbar.isHidden)! {
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

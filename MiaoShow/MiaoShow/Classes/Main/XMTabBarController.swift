@@ -45,8 +45,7 @@ class XMTabBarController: UITabBarController {
     override func viewWillLayoutSubviews() {
         
         let tabbarbtn = self.tabBar.subviews[3]
-        tabbarbtn.frame.origin.y += 5
-        
+        tabbarbtn.frame.origin.y = 7
         
     }
 

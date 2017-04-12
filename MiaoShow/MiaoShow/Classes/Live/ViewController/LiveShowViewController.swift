@@ -28,7 +28,7 @@ class LiveShowViewController: XMBaseViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -43,6 +43,10 @@ class LiveShowViewController: XMBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func leaveRoom() {
+        _ = navigationController?.popViewController(animated: true)
+    }
 }
 
 // MARK: - 直播播放
