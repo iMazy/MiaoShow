@@ -20,19 +20,19 @@ class LiveShowViewController: XMBaseViewController {
         
         // Do any additional setup after loading the view.
         
-        print(liveModel?.flv ?? "5555")
-        
         playWithFLV(flv: (liveModel?.flv)!)
         
         
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-         moviePlayer?.shutdown()
+        moviePlayer?.shutdown()
         moviePlayer?.view.removeFromSuperview()
         moviePlayer = nil
         
@@ -57,7 +57,7 @@ extension LiveShowViewController {
         options?.setPlayerOptionIntValue(512, forKey: "vol")
         
         moviePlayer = IJKFFMoviePlayerController(contentURLString: flv, with: options)
-        moviePlayer?.view.frame = view.bounds
+        moviePlayer?.view.frame = UIScreen.main.bounds
         // 视图填充样式
         moviePlayer?.scalingMode = .fill
         // 设置自动播放(必须设置为NO, 防止自动播放, 才能更好的控制直播的状态)
@@ -68,12 +68,5 @@ extension LiveShowViewController {
         moviePlayer?.prepareToPlay()
         
     }
-    
-    
 }
-
-
-
-
-
 
