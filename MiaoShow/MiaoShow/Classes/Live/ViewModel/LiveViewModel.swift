@@ -10,6 +10,7 @@ import UIKit
 
 import Alamofire
 import MJExtension
+import SDWebImage
 
 class LiveViewModel: NSObject {
     

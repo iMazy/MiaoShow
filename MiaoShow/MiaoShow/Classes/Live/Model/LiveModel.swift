@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class LiveModel: NSObject {
     
@@ -17,8 +18,14 @@ class LiveModel: NSObject {
     var userId: String?
     var gender: Int = 0
     var myname: String?
-    var bigpic: String?
+    var bigpic: String? {
+        didSet {
+            SDWebImageDownloader.shared().downloadImage(with: URL(string: bigpic ?? ""), options: [], progress: nil, completed: { (image, _, _, _) in
+                self.bigImage = image
+            })
+        }
+    }
     var smallpic: String?
     var signatures: String?
-    
+    var bigImage: UIImage?
 }

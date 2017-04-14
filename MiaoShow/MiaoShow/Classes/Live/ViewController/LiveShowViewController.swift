@@ -8,8 +8,14 @@
 
 import UIKit
 import IJKMediaFramework
+import SDWebImage
+
+private let collectionReuse = "collectionIdentifier"
+private let tableViewReuse = "tableViewIdentifier"
 
 class LiveShowViewController: XMBaseViewController {
+    
+    
     // 左上角内容视图
     @IBOutlet weak var topLeftContentView: UIView!
     // 用户图像
@@ -27,13 +33,41 @@ class LiveShowViewController: XMBaseViewController {
     
     var liveModel: LiveModel?
     
+    lazy var flowLayout: UICollectionViewFlowLayout = {
+       let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = UICollectionViewScrollDirection.horizontal
+        flowLayout.itemSize = CGSize(width: 36, height: 36)
+        flowLayout.minimumLineSpacing = 5
+        return flowLayout
+    }()
+    
+    @IBOutlet weak var placeholderImage: UIImageView!
+    
     var moviePlayer: IJKFFMoviePlayerController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         
+        print(liveModel?.bigImage ?? "666")
+        self.placeholderImage.image = liveModel?.bigImage
+        self.topLeftContentView.layer.cornerRadius = self.topLeftContentView.bounds.size.height/2
+        self.followButton.layer.cornerRadius = self.followButton.bounds.size.height/2
+        self.userIconImageView.layer.cornerRadius = self.userIconImageView.bounds.size.height/2
+        self.userIconImageView.layer.masksToBounds = true
+        
+        collectionView.backgroundColor = .clear
+        self.collectionView.setCollectionViewLayout(flowLayout, animated: true)
+        collectionView.dataSource = self
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionReuse)
+        collectionView.showsHorizontalScrollIndicator = false
+        
+        
+        tableView.backgroundColor = .clear
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewReuse)
+        
+        // 开始
         playWithFLV(flv: (liveModel?.flv)!)
         
         
@@ -62,6 +96,35 @@ class LiveShowViewController: XMBaseViewController {
     }
 }
 
+// MARK: - UICollectionViewDataSource,UICollectionViewDelegate
+extension LiveShowViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 30
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionReuse, for: indexPath)
+        cell.backgroundColor = .red
+        cell.layer.cornerRadius = cell.bounds.size.width/2
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension LiveShowViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: tableViewReuse)!
+        cell.backgroundColor = .clear
+        cell.contentView.backgroundColor = .clear
+        cell.textLabel?.text = "\(indexPath.row)"
+        return cell
+    }
+}
+
 // MARK: - 直播播放
 extension LiveShowViewController {
     
@@ -81,9 +144,24 @@ extension LiveShowViewController {
         moviePlayer?.shouldAutoplay = true
         moviePlayer?.shouldShowHudView = false
         view.insertSubview((moviePlayer?.view)!, at: 0)
-        
         moviePlayer?.prepareToPlay()
         
+//        self.placeholderImage.removeFromSuperview()
+//        self.placeholderImage = nil
+        
+        initObserver()
+        
+    }
+    
+    func initObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didFinish), name: NSNotification.Name.IJKMPMediaPlaybackIsPreparedToPlayDidChange, object: nil)
+    }
+    
+    func didFinish() {
+        // 播放完之后, 继续重播
+//        self.moviePlayer?.play()
+        self.placeholderImage.removeFromSuperview()
+        self.placeholderImage = nil
     }
 }
 
