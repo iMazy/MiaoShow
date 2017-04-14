@@ -10,6 +10,20 @@ import UIKit
 import IJKMediaFramework
 
 class LiveShowViewController: XMBaseViewController {
+    // 左上角内容视图
+    @IBOutlet weak var topLeftContentView: UIView!
+    // 用户图像
+    @IBOutlet weak var userIconImageView: UIButton!
+    // 用户名称
+    @IBOutlet weak var userNameLabel: UILabel!
+    // 观看人数
+    @IBOutlet weak var watchCountLabel: UILabel!
+    // 关注按钮
+    @IBOutlet weak var followButton: UIButton!
+    // 右上角观看用户混动视图
+    @IBOutlet weak var collectionView: UICollectionView!
+    // 聊天展示视图
+    @IBOutlet weak var tableView: UITableView!
     
     var liveModel: LiveModel?
     
@@ -24,7 +38,6 @@ class LiveShowViewController: XMBaseViewController {
         
         
     }
-    
     
     
     override func viewWillAppear(_ animated: Bool) {
