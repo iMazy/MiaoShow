@@ -54,6 +54,12 @@ class LiveShowViewController: XMBaseViewController {
         self.userIconImageView.layer.cornerRadius = self.userIconImageView.bounds.size.height/2
         self.userIconImageView.layer.masksToBounds = true
         
+        if let iconImage = liveModel?.smallpic {
+            self.userIconImageView.sd_setBackgroundImage(with: URL(string: iconImage), for: .normal)
+        }
+        self.userNameLabel.text = liveModel?.myname
+        self.watchCountLabel.text = "\(liveModel?.allnum ?? 0)人"
+        
         
         
         collectionView.backgroundColor = .clear
@@ -145,9 +151,6 @@ extension LiveShowViewController {
         moviePlayer?.shouldShowHudView = false
         view.insertSubview((moviePlayer?.view)!, at: 0)
         moviePlayer?.prepareToPlay()
-        
-//        self.placeholderImage.removeFromSuperview()
-//        self.placeholderImage = nil
         
         initObserver()
         
