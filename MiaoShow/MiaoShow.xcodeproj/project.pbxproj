@@ -26,6 +26,8 @@
 		645CB63E1E9A6C57008B6671 /* LiveShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645CB63D1E9A6C57008B6671 /* LiveShowViewController.swift */; };
 		645CB6401E9A6C7F008B6671 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645CB63F1E9A6C7F008B6671 /* IJKMediaFramework.framework */; };
 		645CB6421E9A6CAF008B6671 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 645CB6411E9A6CAF008B6671 /* libz.tbd */; };
+		647458D51EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.55.31.png in Resources */ = {isa = PBXBuildFile; fileRef = 647458D31EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.55.31.png */; };
+		647458D61EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.53.00.png in Resources */ = {isa = PBXBuildFile; fileRef = 647458D41EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.53.00.png */; };
 		64FDFF7A1E987994003AB388 /* LiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF781E987994003AB388 /* LiveTableViewCell.swift */; };
 		64FDFF7B1E987994003AB388 /* LiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FDFF791E987994003AB388 /* LiveTableViewCell.xib */; };
 		64FDFF7D1E988C3C003AB388 /* LiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF7C1E988C3C003AB388 /* LiveModel.swift */; };
@@ -55,6 +57,8 @@
 		645CB63D1E9A6C57008B6671 /* LiveShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveShowViewController.swift; sourceTree = "<group>"; };
 		645CB63F1E9A6C7F008B6671 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		645CB6411E9A6CAF008B6671 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		647458D31EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.55.31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot 2017年4月15日 下午1.55.31.png"; sourceTree = "<group>"; };
+		647458D41EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.53.00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot 2017年4月15日 下午1.53.00.png"; sourceTree = "<group>"; };
 		64FDFF781E987994003AB388 /* LiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTableViewCell.swift; sourceTree = "<group>"; };
 		64FDFF791E987994003AB388 /* LiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTableViewCell.xib; sourceTree = "<group>"; };
 		64FDFF7C1E988C3C003AB388 /* LiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveModel.swift; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 		642E975B1E97572200C4F6EA /* System */ = {
 			isa = PBXGroup;
 			children = (
+				647458D31EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.55.31.png */,
+				647458D41EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.53.00.png */,
 				642E97321E9755D200C4F6EA /* AppDelegate.swift */,
 				642E97361E9755D200C4F6EA /* Main.storyboard */,
 				642E97391E9755D200C4F6EA /* Assets.xcassets */,
@@ -389,7 +395,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				642E973D1E9755D200C4F6EA /* LaunchScreen.storyboard in Resources */,
+				647458D61EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.53.00.png in Resources */,
 				64FDFF7B1E987994003AB388 /* LiveTableViewCell.xib in Resources */,
+				647458D51EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.55.31.png in Resources */,
 				642E973A1E9755D200C4F6EA /* Assets.xcassets in Resources */,
 				642E97381E9755D200C4F6EA /* Main.storyboard in Resources */,
 				643544331EA1E5EF002D9CDE /* LiveShowViewController.xib in Resources */,
