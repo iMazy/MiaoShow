@@ -6,6 +6,8 @@
 build/
 DerivedData/
 
+MiaoShow/MiaoShow/Classes/Frameworks/
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
