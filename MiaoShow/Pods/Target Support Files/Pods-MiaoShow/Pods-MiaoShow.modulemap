@@ -1,0 +1,6 @@
+framework module Pods_MiaoShow {
+  umbrella header "Pods-MiaoShow-umbrella.h"
+
+  export *
+  module * { export * }
+}
