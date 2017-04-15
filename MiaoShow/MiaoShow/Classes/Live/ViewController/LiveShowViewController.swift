@@ -48,13 +48,13 @@ class LiveShowViewController: XMBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        print(liveModel?.bigImage ?? "666")
         self.placeholderImage.image = liveModel?.bigImage
         self.topLeftContentView.layer.cornerRadius = self.topLeftContentView.bounds.size.height/2
         self.followButton.layer.cornerRadius = self.followButton.bounds.size.height/2
         self.userIconImageView.layer.cornerRadius = self.userIconImageView.bounds.size.height/2
         self.userIconImageView.layer.masksToBounds = true
+        
+        
         
         collectionView.backgroundColor = .clear
         self.collectionView.setCollectionViewLayout(flowLayout, animated: true)
