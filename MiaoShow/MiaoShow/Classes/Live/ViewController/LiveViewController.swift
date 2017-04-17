@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 let liveCellID = "homeLiveCell"
 let screenH = UIScreen.main.bounds.height
@@ -48,9 +49,28 @@ class LiveViewController: XMBaseViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"head_crown")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(search))
         
-        liveViewModel.loadListData(complite: {()->() in
-            self.tableView.reloadData()
+        
+        
+        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { [weak self] in
+            
+            self?.liveViewModel.loadListData(pullUp: false) {
+                self?.tableView.reloadData()
+                self?.tableView.mj_header.endRefreshing()
+            }
+            
         })
+        
+        tableView.mj_header.beginRefreshing()
+        
+        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: { [weak self] in
+            self?.liveViewModel.loadListData(pullUp: true) {
+                self?.tableView.reloadData()
+                self?.tableView.mj_footer.endRefreshing()
+            }
+        })
+        
+
+        
     }
     
     @objc func search() {
