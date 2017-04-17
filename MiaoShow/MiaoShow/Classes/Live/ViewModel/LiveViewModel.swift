@@ -16,9 +16,19 @@ class LiveViewModel: NSObject {
     
     lazy var liveList = [LiveModel]()
     
-    func loadListData(complite:@escaping ()->()) {
+    var pageIndex: Int = 1
+    
+    func loadListData(pullUp: Bool, complite:@escaping ()->()) {
+        // 上拉加载
+        if pullUp {
+            pageIndex += 1
+        } else {
+            pageIndex = 1
+            liveList.removeAll()
+        }
         
-        Alamofire.request("http://live.9158.com/Fans/GetHotLive?page=1").responseJSON { (response) in
+        let url = "http://live.9158.com/Fans/GetHotLive?page=\(pageIndex)"
+        Alamofire.request(url).responseJSON { (response) in
             if let JSON:[String:AnyObject] = response.result.value as! [String : AnyObject]? {
                 
                 let array = JSON["data"]?["list"] as! [[String: AnyObject]]
@@ -34,8 +44,5 @@ class LiveViewModel: NSObject {
         }
         
     }
-    
-    
-    
     
 }
