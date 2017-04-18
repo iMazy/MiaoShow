@@ -21,6 +21,7 @@ class XMTabBarController: UITabBarController {
         addChildVC(className: "GameViewController", title: "游戏", image: "toolbar_game")
         addChildVC(className: "MeViewController", title: "我的", image: "toolbar_me")
         
+        self.delegate = self
     }
     
     private func addChildVC(className:String, title: String, image:String) {
@@ -48,10 +49,33 @@ class XMTabBarController: UITabBarController {
         tabbarbtn.frame.origin.y = 7
         
     }
+    
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if self.selectedIndex == 3 {
+            print("点击了直播按钮")
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+extension XMTabBarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        if (viewController as! UINavigationController).title == nil  {
+            let liveRD = LiveRecordController()
+            liveRD.providesPresentationContextTransitionStyle = true
+            liveRD.definesPresentationContext = true
+            liveRD.modalPresentationStyle = .overCurrentContext
+            present(liveRD, animated: false, completion: nil)
+            return false
+        } else {
+            return true
+        }
+    }
 }
