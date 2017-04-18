@@ -25,16 +25,27 @@ class LiveRecordController: UIViewController {
         bottomContentView.setNeedsLayout()
 
 
-        bottomContentView.transform = CGAffineTransform(translationX: 0, y: bottomContentView.bounds.height)
         
+        
+//        bottomContentView.transform = CGAffineTransform(translationX: 0, y: bottomContentView.bounds.height)
+        bottomContentView.frame.origin.y += bottomContentView.bounds.height
+        bottomContraint.constant -= bottomContentView.bounds.height
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        UIView.animate(withDuration: 0.3, delay: 0, options: [UIViewAnimationOptions.curveLinear], animations: {
-            self.bottomContentView.transform = .identity
-        }, completion: nil)
+        UIView.animate(withDuration: 1, delay: 0, options: [.curveLinear], animations: { 
+            
+        }) { (_) in
+            self.bottomContraint.constant += self.bottomContentView.bounds.height
+        }
+        
+//        UIView.animate(withDuration: 0.3, delay: 0, options: [UIViewAnimationOptions.curveLinear], animations: {
+////            self.bottomContentView.transform = .identity
+////            self.bottomContentView.frame.origin.y -= self.bottomContentView.bounds.height
+//            self.bottomContraint.constant += self.bottomContentView.bounds.height
+//        }, dismiss(animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>))
     }
 
 
