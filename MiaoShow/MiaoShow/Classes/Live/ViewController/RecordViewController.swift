@@ -12,6 +12,9 @@ import UIKit
 import AVFoundation
 
 class RecordViewController: UIViewController {
+    
+    var closeAction: (()->())?
+    
     /// 懒加载session任务
     fileprivate lazy var session:AVCaptureSession = AVCaptureSession()
     /// 懒加载预览视图
@@ -59,7 +62,10 @@ extension RecordViewController {
         session.removeInput(videoIpt)
         session.removeOutput(videoOpt)
         
-        dismiss(animated: true, completion: nil)
+        
+        dismiss(animated: true) {
+            self.closeAction!()
+        }
         
     }
     

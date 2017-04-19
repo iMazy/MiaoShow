@@ -41,10 +41,13 @@ class LiveRecordController: UIViewController {
     
     @IBAction func beginRecord() {
         print("录制直播")
-        
-        present(RecordViewController(), animated: true, completion: nil)
-        
-//        self.dismiss(animated: false, completion: nil)
+        let recordVC = RecordViewController()
+        recordVC.closeAction = {
+            self.dismiss(animated: false, completion: nil)
+        }
+        present(recordVC, animated: true) {
+            self.view.isHidden = true
+        }
     }
     
     @IBAction func shortVideoAction() {
