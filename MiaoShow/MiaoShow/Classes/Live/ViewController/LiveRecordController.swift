@@ -24,14 +24,14 @@ class LiveRecordController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveLinear], animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveLinear], animations: {
             self.bottomContentView.transform =  .identity
         })
     }
 
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        UIView.animate(withDuration: 0.3, animations: { 
+        UIView.animate(withDuration: 0.2, animations: {
             self.bottomContentView.transform = CGAffineTransform(translationX: 0, y: self.bottomContentView.bounds.height)
         }) { (_) in
             self.dismiss(animated: false, completion: nil)
@@ -41,6 +41,10 @@ class LiveRecordController: UIViewController {
     
     @IBAction func beginRecord() {
         print("录制直播")
+        
+        present(RecordViewController(), animated: true, completion: nil)
+        
+//        self.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func shortVideoAction() {

@@ -27,7 +27,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGx-D9-4Ev">
-                            <rect key="frame" x="247" y="56" width="83" height="50"/>
+                            <rect key="frame" x="247" y="48" width="83" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <inset key="titleEdgeInsets" minX="-50" minY="80" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="17" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -37,7 +37,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="na4-b9-wRH">
-                            <rect key="frame" x="138" y="56" width="99" height="50"/>
+                            <rect key="frame" x="138" y="48" width="99" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <inset key="titleEdgeInsets" minX="-50" minY="80" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -47,7 +47,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgr-Pv-Ee3">
-                            <rect key="frame" x="45" y="56" width="83" height="50"/>
+                            <rect key="frame" x="45" y="48" width="83" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <inset key="titleEdgeInsets" minX="-50" minY="80" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -59,7 +59,7 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="na4-b9-wRH" firstAttribute="centerY" secondItem="8rO-u8-ZUW" secondAttribute="centerY" id="4wj-zw-QiU"/>
+                        <constraint firstItem="na4-b9-wRH" firstAttribute="centerY" secondItem="8rO-u8-ZUW" secondAttribute="centerY" constant="-8" id="4wj-zw-QiU"/>
                         <constraint firstItem="hgr-Pv-Ee3" firstAttribute="centerY" secondItem="na4-b9-wRH" secondAttribute="centerY" id="8ra-ni-d0T"/>
                         <constraint firstItem="HGx-D9-4Ev" firstAttribute="centerY" secondItem="na4-b9-wRH" secondAttribute="centerY" id="CMK-6W-mKg"/>
                         <constraint firstAttribute="height" constant="162" id="DWD-Nl-rFv"/>
