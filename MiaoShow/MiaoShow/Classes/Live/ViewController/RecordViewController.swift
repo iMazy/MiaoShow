@@ -66,7 +66,7 @@ extension RecordViewController {
     
     /// 切换前后摄像头
     @IBAction func switchCamera() {
-                
+        
     }
     
 }
@@ -109,7 +109,22 @@ extension RecordViewController {
     
     /// 设置音频相关
     fileprivate func setupAudio() {
-        
+        // 1.设置音频的输入（话筒）
+        // 1.1 获取话筒设备
+        guard let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeAudio) else {
+            return
+        }
+        // 1.2 根据device创建AVCaptureInput
+        guard let audioInput = try? AVCaptureDeviceInput(device: device) else {
+            return
+        }
+        // 1.3 将input添加到会话中
+        session.addInput(audioInput)
+        // 2 给会话设置音频输出源
+        let audioOutput = AVCaptureAudioDataOutput()
+        audioOutput.setSampleBufferDelegate(self, queue: audioQueue)
+        session.addOutput(audioOutput)
+
     }
 }
 
