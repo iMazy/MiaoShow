@@ -11,46 +11,31 @@ import UIKit
 class LiveRecordController: UIViewController {
 
     
-    @IBOutlet weak var bottomContentView: UIImageView!
-    @IBOutlet weak var bottomContraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var bottomContentView: UIView!    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
-        
-        bottomContentView.layoutIfNeeded()
-        bottomContentView.setNeedsLayout()
 
-
-        
-        
-//        bottomContentView.transform = CGAffineTransform(translationX: 0, y: bottomContentView.bounds.height)
-        bottomContentView.frame.origin.y += bottomContentView.bounds.height
-        bottomContraint.constant -= bottomContentView.bounds.height
-        
+        bottomContentView.transform = CGAffineTransform(translationX: 0, y: bottomContentView.bounds.height)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        UIView.animate(withDuration: 1, delay: 0, options: [.curveLinear], animations: { 
-            
-        }) { (_) in
-            self.bottomContraint.constant += self.bottomContentView.bounds.height
-        }
-        
-//        UIView.animate(withDuration: 0.3, delay: 0, options: [UIViewAnimationOptions.curveLinear], animations: {
-////            self.bottomContentView.transform = .identity
-////            self.bottomContentView.frame.origin.y -= self.bottomContentView.bounds.height
-//            self.bottomContraint.constant += self.bottomContentView.bounds.height
-//        }, dismiss(animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>))
+        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveLinear], animations: {
+            self.bottomContentView.transform =  .identity
+        })
     }
 
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        dismiss(animated: false, completion: nil)
+        UIView.animate(withDuration: 0.3, animations: { 
+            self.bottomContentView.transform = CGAffineTransform(translationX: 0, y: self.bottomContentView.bounds.height)
+        }) { (_) in
+            self.dismiss(animated: false, completion: nil)
+        }
     }
     
     
