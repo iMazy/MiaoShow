@@ -132,4 +132,12 @@ extension RecordViewController {
 // MARK: - 获取数据
 extension RecordViewController: AVCaptureVideoDataOutputSampleBufferDelegate,AVCaptureAudioDataOutputSampleBufferDelegate {
     
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+        
+        if connection == self.videoOpt?.connection(withMediaType: AVMediaTypeVideo) {
+            print("采集到视频画面")
+        } else {
+            print("采集到音频画面")
+        }
+    }
 }
