@@ -66,7 +66,29 @@ extension RecordViewController {
     
     /// 切换前后摄像头
     @IBAction func switchCamera() {
+        // 1.获取之前的镜头
+        guard var position = videoIpt?.device.position else {
+            return
+        }
+        // 2.获取当前应该显示的镜头
+        position = position == .front ? .back : .front
+        // 3.根据当前镜头创建新的Device
+        let devices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) as? [AVCaptureDevice]
+        guard let device = devices?.filter({ $0.position == position}).first else {
+            return
+        }
+        // 4.根据新的Device创建新的Input
+        guard let videoInput = try? AVCaptureDeviceInput(device: device) else {
+            return
+        }
         
+        // 5.在session中切换Input
+        session.beginConfiguration() // 开始配置
+        session.removeInput(self.videoIpt) // 移除输入源
+        session.addInput(videoInput)        // 添加输入源
+        session.commitConfiguration() // 完成配置
+        
+        self.videoIpt = videoInput
     }
     
 }
