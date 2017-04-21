@@ -13,8 +13,24 @@ class LiveTableViewCell: UITableViewCell {
     
     var liveModel: LiveModel? {
         didSet {
-            anchorImageView.sd_setImage(with: URL(string: (liveModel?.bigpic)!))
-            anchorIconView.sd_setImage(with: URL(string:(liveModel?.smallpic)!), placeholderImage: UIImage(named:"placeholder_head"))
+//            anchorImageView.sd_setImage(with: URL(string: (liveModel?.bigpic)!))
+//            anchorIconView.sd_setImage(with: URL(string:(liveModel?.smallpic)!), placeholderImage: UIImage(named:"placeholder_head"))
+            
+//            SDWebImageDownloader.shared().downloadImage(with: URL(string: (liveModel?.smallpic)!), options: [], progress: nil) { (image, _, _, _) in
+//                let newIcon = image?.scaleRoundImage(size: CGSize(width: 46, height: 46), radius: 23)
+//                self.anchorIconView.image = newIcon
+//            }
+            
+            
+            anchorIconView.sd_setImage(with: URL(string: (liveModel?.bigpic)!)) { (image, _, _, _) in
+                let newIcon = image?.scaleRoundImage(size: CGSize(width: 46, height: 46), radius: 23)
+                self.anchorIconView.image = newIcon
+            }
+            
+            anchorImageView.sd_setImage(with: URL(string: (liveModel?.bigpic)!)) { (image, _, _, _) in
+               let newImage = image?.scaleRoundImage(size: CGSize(width: self.bounds.width, height: self.bounds.width), radius: 0)
+                self.anchorImageView.image = newImage
+            }
             
             anchorNameLabel.text = liveModel?.myname ?? ""
             anchorGpsLabel.text = liveModel?.gps ?? ""

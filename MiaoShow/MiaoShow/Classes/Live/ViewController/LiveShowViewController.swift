@@ -51,8 +51,8 @@ class LiveShowViewController: XMBaseViewController {
         self.placeholderImage.image = liveModel?.bigImage
         self.topLeftContentView.layer.cornerRadius = self.topLeftContentView.bounds.size.height/2
         self.followButton.layer.cornerRadius = self.followButton.bounds.size.height/2
-        self.userIconImageView.layer.cornerRadius = self.userIconImageView.bounds.size.height/2
-        self.userIconImageView.layer.masksToBounds = true
+//        self.userIconImageView.layer.cornerRadius = self.userIconImageView.bounds.size.height/2
+//        self.userIconImageView.layer.masksToBounds = true
         
         if let iconImage = liveModel?.smallpic {
             self.userIconImageView.sd_setBackgroundImage(with: URL(string: iconImage), for: .normal)
