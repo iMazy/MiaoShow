@@ -32,6 +32,7 @@
 		64D1C1741EA6445100687251 /* LiveRecordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D1C1721EA6445100687251 /* LiveRecordController.xib */; };
 		64D1C19F1EA795E900687251 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D1C19D1EA795E900687251 /* RecordViewController.swift */; };
 		64D1C1A01EA795E900687251 /* RecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D1C19E1EA795E900687251 /* RecordViewController.xib */; };
+		64EF8D5A1EA9D01800A7F207 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF8D591EA9D01800A7F207 /* UIImageExtension.swift */; };
 		64FDFF7A1E987994003AB388 /* LiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF781E987994003AB388 /* LiveTableViewCell.swift */; };
 		64FDFF7B1E987994003AB388 /* LiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FDFF791E987994003AB388 /* LiveTableViewCell.xib */; };
 		64FDFF7D1E988C3C003AB388 /* LiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF7C1E988C3C003AB388 /* LiveModel.swift */; };
@@ -67,6 +68,7 @@
 		64D1C1721EA6445100687251 /* LiveRecordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveRecordController.xib; sourceTree = "<group>"; };
 		64D1C19D1EA795E900687251 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		64D1C19E1EA795E900687251 /* RecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordViewController.xib; sourceTree = "<group>"; };
+		64EF8D591EA9D01800A7F207 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		64FDFF781E987994003AB388 /* LiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTableViewCell.swift; sourceTree = "<group>"; };
 		64FDFF791E987994003AB388 /* LiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTableViewCell.xib; sourceTree = "<group>"; };
 		64FDFF7C1E988C3C003AB388 /* LiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveModel.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				642E976C1E9761DE00C4F6EA /* Bundle+XMExtension.swift */,
+				64EF8D591EA9D01800A7F207 /* UIImageExtension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				642E97651E975E4200C4F6EA /* VideoViewController.swift in Sources */,
 				642E975F1E97579800C4F6EA /* XMNavigationController.swift in Sources */,
 				642E97671E975E5A00C4F6EA /* ShowViewController.swift in Sources */,
+				64EF8D5A1EA9D01800A7F207 /* UIImageExtension.swift in Sources */,
 				645CB63E1E9A6C57008B6671 /* LiveShowViewController.swift in Sources */,
 				642E97691E975E6300C4F6EA /* GameViewController.swift in Sources */,
 				64FDFF7F1E988C49003AB388 /* LiveViewModel.swift in Sources */,
