@@ -53,7 +53,7 @@
                             </state>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello 雪儿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipq-UB-opq">
-                            <rect key="frame" x="40" y="6" width="53" height="14"/>
+                            <rect key="frame" x="40" y="6" width="60" height="14"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -77,6 +77,7 @@
                         <constraint firstItem="ipq-UB-opq" firstAttribute="top" secondItem="an1-vx-Ebc" secondAttribute="top" constant="1" id="cPw-Mi-sMJ"/>
                         <constraint firstItem="hyJ-1b-mey" firstAttribute="bottom" secondItem="an1-vx-Ebc" secondAttribute="bottom" constant="-1" id="j0W-9q-8d0"/>
                         <constraint firstAttribute="height" constant="40" id="oiO-em-zda"/>
+                        <constraint firstItem="yzG-bP-YGf" firstAttribute="leading" secondItem="ipq-UB-opq" secondAttribute="trailing" constant="5" id="qfu-9f-O8R"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hR-p9-fgx">

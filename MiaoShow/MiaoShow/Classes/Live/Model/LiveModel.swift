@@ -6,11 +6,9 @@
 //  Copyright © 2017年 Mazy. All rights reserved.
 //
 
-import UIKit
-import SDWebImage
+import Foundation
 
-class LiveModel: NSObject {
-    
+struct LiveModel {
     var allnum: Int64 = 0
     var gps: String?
     var flv: String?
@@ -18,14 +16,32 @@ class LiveModel: NSObject {
     var userId: String?
     var gender: Int = 0
     var myname: String?
-    var bigpic: String? {
-        didSet {
-            SDWebImageDownloader.shared().downloadImage(with: URL(string: bigpic ?? ""), options: [], progress: nil, completed: { (image, _, _, _) in
-                self.bigImage = image
-            })
-        }
-    }
+    var bigpic: String?
     var smallpic: String?
     var signatures: String?
-    var bigImage: UIImage?
+    
+    init(fromJSONDictionary info: [String: AnyObject]) {
+        if let allnum = info["allnum"] as? Int64,
+            let gps = info["gps"] as? String,
+            let flv = info["flv"] as? String,
+            let starlevel = info["starlevel"] as? Int,
+            let userId = info["userId"] as? String,
+            let gender = info["gender"] as? Int,
+            let myname = info["myname"] as? String,
+            let bigpic = info["bigpic"] as? String,
+            let smallpic = info["smallpic"] as? String,
+            let signatures = info["signatures"] as? String {
+            self.allnum = allnum
+            self.gps = gps
+            self.flv = flv
+            self.starlevel = starlevel
+            self.userId = userId
+            self.gender = gender
+            self.myname = myname
+            self.bigpic = bigpic
+            self.smallpic = smallpic
+            self.signatures = signatures
+        }
+    }
+    
 }

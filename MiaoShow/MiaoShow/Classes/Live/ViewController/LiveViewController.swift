@@ -14,6 +14,8 @@ let screenH = UIScreen.main.bounds.height
 
 class LiveViewController: XMBaseViewController {
     
+    var liveModels: [LiveModel] = [LiveModel]()
+    
     /// 懒加载tableView
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
@@ -26,8 +28,6 @@ class LiveViewController: XMBaseViewController {
     
     var currentOffsetY: CGFloat?
     
-    lazy var liveViewModel = LiveViewModel()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,25 +51,30 @@ class LiveViewController: XMBaseViewController {
         
         
         
-        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { [weak self] in
-            
-            self?.liveViewModel.loadListData(pullUp: false) {
-                self?.tableView.reloadData()
-                self?.tableView.mj_header.endRefreshing()
+        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
+            NetworkManager.shared.get(pullup: false) { (results) in
+                self.liveModels.removeAll()
+                self.liveModels = results
+                // 刷新数据
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.tableView.mj_header.endRefreshing()
+                }
             }
-            
         })
         
         tableView.mj_header.beginRefreshing()
         
-        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: { [weak self] in
-            self?.liveViewModel.loadListData(pullUp: true) {
-                self?.tableView.reloadData()
-                self?.tableView.mj_footer.endRefreshing()
+        tableView.mj_footer = MJRefreshAutoFooter(refreshingBlock: {
+            NetworkManager.shared.get(pullup: true) { (results) in
+                self.liveModels += results
+                // 刷新数据
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.tableView.mj_footer.endRefreshing()
+                }
             }
         })
-        
-
         
     }
     
@@ -94,17 +99,17 @@ class LiveViewController: XMBaseViewController {
 
 extension LiveViewController:UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.liveViewModel.liveList.count
+        return self.liveModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: liveCellID) as! LiveTableViewCell
-        cell.liveModel = self.liveViewModel.liveList[indexPath.row]
+        cell.liveModel = self.liveModels[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model = self.liveViewModel.liveList[indexPath.row]
+        let model = self.liveModels[indexPath.row]
         let showVC = LiveShowViewController()
         showVC.liveModel = model
         show(showVC, sender: nil)

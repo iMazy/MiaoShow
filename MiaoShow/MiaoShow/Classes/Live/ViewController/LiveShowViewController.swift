@@ -48,15 +48,24 @@ class LiveShowViewController: XMBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.placeholderImage.image = liveModel?.bigImage
+        placeholderImage.sd_setImage(with: URL(string: (liveModel?.bigpic!)!)) { (image, _, _, _) in
+            let newImage = image?.scaleRoundImage(size: CGSize(width: self.view.bounds.width, height: self.view.bounds.height), radius: 0)
+            self.placeholderImage.image = newImage
+        }
+        
+        
         self.topLeftContentView.layer.cornerRadius = self.topLeftContentView.bounds.size.height/2
         self.followButton.layer.cornerRadius = self.followButton.bounds.size.height/2
-//        self.userIconImageView.layer.cornerRadius = self.userIconImageView.bounds.size.height/2
-//        self.userIconImageView.layer.masksToBounds = true
         
         if let iconImage = liveModel?.smallpic {
-            self.userIconImageView.sd_setBackgroundImage(with: URL(string: iconImage), for: .normal)
+            userIconImageView.sd_setBackgroundImage(with: URL(string: iconImage), for: .normal, completed: { (image, _, _, _) in
+                let newImage = image?.scaleRoundImage(size: CGSize(width: 30, height: 30), radius: 15)
+                self.userIconImageView.setBackgroundImage(newImage, for: .normal)
+            })
+            
+            
         }
+        
         self.userNameLabel.text = liveModel?.myname
         self.watchCountLabel.text = "\(liveModel?.allnum ?? 0)人"
         
