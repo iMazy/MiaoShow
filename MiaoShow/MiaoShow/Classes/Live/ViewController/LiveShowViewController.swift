@@ -33,6 +33,10 @@ class LiveShowViewController: XMBaseViewController {
     
     var liveModel: LiveModel?
     
+    lazy var emitterLayer = {
+        return CAEmitterLayer()
+    }()
+    
     lazy var flowLayout: UICollectionViewFlowLayout = {
        let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = UICollectionViewScrollDirection.horizontal
@@ -91,6 +95,9 @@ class LiveShowViewController: XMBaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
+       _ = setupEmitterLayer()
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -140,6 +147,50 @@ extension LiveShowViewController: UITableViewDataSource {
     }
 }
 
+extension LiveShowViewController {
+    func setupEmitterLayer() {
+        
+        // 发射器在xy平面的中心位置
+        emitterLayer.emitterPosition = CGPoint(x: UIScreen.main.bounds.width-50, y: UIScreen.main.bounds.height-50)
+        // 发射器的尺寸大小
+        emitterLayer.emitterSize = CGSize(width: 30, height: 30)
+        // 渲染模式
+        emitterLayer.renderMode = kCAEmitterLayerUnordered
+        // 开启三维效果
+        emitterLayer.preservesDepth = true
+        var array = [CAEmitterCell]()
+        for i in 0..<10 {
+            // 发射单元
+            let stepCell = CAEmitterCell()
+            stepCell.birthRate = 1
+            // 粒子的创建速率，默认为1/s
+            stepCell.blueSpeed = 1
+            // 粒子存活时间
+            stepCell.lifetime = Float(arc4random_uniform(4)+1)
+            // 粒子的生存时间容差
+            stepCell.lifetimeRange = 1.5
+            // good3_30x30
+            let image = UIImage(named: "good\(i)_30x30")
+            stepCell.contents = image?.cgImage
+            // 粒子的运动速度
+            stepCell.velocity = CGFloat(arc4random_uniform(100)+100)
+            // 粒子速度的容差
+            stepCell.velocityRange = 80
+            // 粒子在xy平面的发射角度
+            stepCell.emissionLongitude = CGFloat(M_PI + M_PI_2)
+            // 粒子发射角度的容差
+            stepCell.emissionRange = CGFloat(M_PI_2/6)
+            // 缩放比例
+            stepCell.scale = 0.3
+            array.append(stepCell)
+        }
+        
+        emitterLayer.emitterCells = array
+        moviePlayer?.view.layer.addSublayer(emitterLayer)
+        
+    }
+}
+
 // MARK: - 直播播放
 extension LiveShowViewController {
     
@@ -172,8 +223,8 @@ extension LiveShowViewController {
     func didFinish() {
         // 播放完之后, 继续重播
 //        self.moviePlayer?.play()
-        self.placeholderImage.removeFromSuperview()
-        self.placeholderImage = nil
+        self.placeholderImage.isHidden = true
+//        self.placeholderImage = nil
     }
 }
 
