@@ -41,7 +41,7 @@ class LiveRecordController: UIViewController {
     
     @IBAction func beginRecord() {
         print("录制直播")
-        let recordVC = RecordViewController()
+        let recordVC = FilterImageViewController()
         recordVC.closeAction = {
             self.dismiss(animated: false, completion: nil)
         }

@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterImageViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterImageViewController" customModule="MiaoShow" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -14,7 +17,37 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRi-zW-npa">
+                    <rect key="frame" x="20" y="30" width="40" height="40"/>
+                    <state key="normal" image="share_close"/>
+                    <connections>
+                        <action selector="closeCapture:" destination="-1" eventType="touchUpInside" id="KCT-Se-jn5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTN-wE-xHZ">
+                    <rect key="frame" x="310" y="27" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="9gg-i1-vmW"/>
+                        <constraint firstAttribute="width" constant="45" id="rA4-dt-Fo1"/>
+                    </constraints>
+                    <state key="normal" image="change"/>
+                    <connections>
+                        <action selector="switctAction:" destination="-1" eventType="touchUpInside" id="AXY-bD-9Io"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MRi-zW-npa" firstAttribute="centerY" secondItem="YTN-wE-xHZ" secondAttribute="centerY" id="01g-ef-mEl"/>
+                <constraint firstAttribute="trailing" secondItem="YTN-wE-xHZ" secondAttribute="trailing" constant="20" id="TnF-Rh-cn2"/>
+                <constraint firstItem="MRi-zW-npa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="flp-2L-bZv"/>
+                <constraint firstItem="MRi-zW-npa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="zhl-7E-T6Y"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="change" width="100" height="100"/>
+        <image name="share_close" width="40" height="40"/>
+    </resources>
 </document>
