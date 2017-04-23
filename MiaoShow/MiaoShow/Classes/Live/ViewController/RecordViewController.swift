@@ -115,7 +115,7 @@ extension RecordViewController {
          return device.position == .front
          }.first
          */
-        // $0意思是去除闭包的第一个参数
+        // $0意思是取出闭包的第一个参数
         let device = devices.filter({$0.position == .front}).first
         // 1.2 通过device创建AVCaptureInput对象
         guard let videoInput = try? AVCaptureDeviceInput(device: device) else {
