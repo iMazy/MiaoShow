@@ -32,6 +32,7 @@ class LiveShowViewController: XMBaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var liveModel: LiveModel?
+    lazy var userSource = [UserModel]()
     
     lazy var emitterLayer = {
         return CAEmitterLayer()
@@ -86,6 +87,14 @@ class LiveShowViewController: XMBaseViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewReuse)
         
+        
+        if let path = Bundle.main.path(forResource: "user.plist", ofType: nil),let userArray = NSArray(contentsOfFile: path) {
+    
+            let users = Users(users: userArray as! [[String : AnyObject]])
+            userSource = users.userArray
+        }
+        
+        
         // 开始
         playWithFLV(flv: (liveModel?.flv)!)
         
@@ -97,6 +106,8 @@ class LiveShowViewController: XMBaseViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         
        _ = setupEmitterLayer()
+        
+        self.collectionView.reloadData()
         
     }
     
@@ -121,7 +132,7 @@ class LiveShowViewController: XMBaseViewController {
 // MARK: - UICollectionViewDataSource,UICollectionViewDelegate
 extension LiveShowViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return userSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

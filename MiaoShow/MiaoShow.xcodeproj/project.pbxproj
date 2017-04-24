@@ -37,6 +37,8 @@
 		64D1C1A01EA795E900687251 /* RecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D1C19E1EA795E900687251 /* RecordViewController.xib */; };
 		64DA1D711EADCF72005F3CFB /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64DA1D701EADCF72005F3CFB /* user.plist */; };
 		64DA1D731EADD027005F3CFB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1D721EADD027005F3CFB /* UserModel.swift */; };
+		64DA1D761EADD595005F3CFB /* UserCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1D741EADD595005F3CFB /* UserCollectionCell.swift */; };
+		64DA1D771EADD595005F3CFB /* UserCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64DA1D751EADD595005F3CFB /* UserCollectionCell.xib */; };
 		64EF8D5A1EA9D01800A7F207 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF8D591EA9D01800A7F207 /* UIImageExtension.swift */; };
 		64FDFF7A1E987994003AB388 /* LiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF781E987994003AB388 /* LiveTableViewCell.swift */; };
 		64FDFF7B1E987994003AB388 /* LiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FDFF791E987994003AB388 /* LiveTableViewCell.xib */; };
@@ -77,6 +79,8 @@
 		64D1C19E1EA795E900687251 /* RecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordViewController.xib; sourceTree = "<group>"; };
 		64DA1D701EADCF72005F3CFB /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
 		64DA1D721EADD027005F3CFB /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		64DA1D741EADD595005F3CFB /* UserCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionCell.swift; sourceTree = "<group>"; };
+		64DA1D751EADD595005F3CFB /* UserCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCollectionCell.xib; sourceTree = "<group>"; };
 		64EF8D591EA9D01800A7F207 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		64FDFF781E987994003AB388 /* LiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTableViewCell.swift; sourceTree = "<group>"; };
 		64FDFF791E987994003AB388 /* LiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTableViewCell.xib; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 				64D1C19E1EA795E900687251 /* RecordViewController.xib */,
 				64042D7A1EAC30BC0064D565 /* FilterImageViewController.swift */,
 				64042D7B1EAC30BC0064D565 /* FilterImageViewController.xib */,
+				64DA1D741EADD595005F3CFB /* UserCollectionCell.swift */,
+				64DA1D751EADD595005F3CFB /* UserCollectionCell.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -427,6 +433,7 @@
 				64FDFF7B1E987994003AB388 /* LiveTableViewCell.xib in Resources */,
 				647458D51EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.55.31.png in Resources */,
 				64D1C1741EA6445100687251 /* LiveRecordController.xib in Resources */,
+				64DA1D771EADD595005F3CFB /* UserCollectionCell.xib in Resources */,
 				64042D7D1EAC30BC0064D565 /* FilterImageViewController.xib in Resources */,
 				64DA1D711EADCF72005F3CFB /* user.plist in Resources */,
 				642E973A1E9755D200C4F6EA /* Assets.xcassets in Resources */,
@@ -505,6 +512,7 @@
 				642E975A1E97570600C4F6EA /* ViewController.swift in Sources */,
 				642E975D1E97577D00C4F6EA /* XMTabBarController.swift in Sources */,
 				642E97631E975E3100C4F6EA /* LiveViewController.swift in Sources */,
+				64DA1D761EADD595005F3CFB /* UserCollectionCell.swift in Sources */,
 				64FDFF7D1E988C3C003AB388 /* LiveModel.swift in Sources */,
 				64FDFF7A1E987994003AB388 /* LiveTableViewCell.swift in Sources */,
 				642E976D1E9761DE00C4F6EA /* Bundle+XMExtension.swift in Sources */,
