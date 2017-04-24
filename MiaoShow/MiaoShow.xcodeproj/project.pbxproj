@@ -36,6 +36,7 @@
 		64D1C19F1EA795E900687251 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D1C19D1EA795E900687251 /* RecordViewController.swift */; };
 		64D1C1A01EA795E900687251 /* RecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D1C19E1EA795E900687251 /* RecordViewController.xib */; };
 		64DA1D711EADCF72005F3CFB /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64DA1D701EADCF72005F3CFB /* user.plist */; };
+		64DA1D731EADD027005F3CFB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1D721EADD027005F3CFB /* UserModel.swift */; };
 		64EF8D5A1EA9D01800A7F207 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF8D591EA9D01800A7F207 /* UIImageExtension.swift */; };
 		64FDFF7A1E987994003AB388 /* LiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF781E987994003AB388 /* LiveTableViewCell.swift */; };
 		64FDFF7B1E987994003AB388 /* LiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FDFF791E987994003AB388 /* LiveTableViewCell.xib */; };
@@ -75,6 +76,7 @@
 		64D1C19D1EA795E900687251 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		64D1C19E1EA795E900687251 /* RecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordViewController.xib; sourceTree = "<group>"; };
 		64DA1D701EADCF72005F3CFB /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
+		64DA1D721EADD027005F3CFB /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		64EF8D591EA9D01800A7F207 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		64FDFF781E987994003AB388 /* LiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTableViewCell.swift; sourceTree = "<group>"; };
 		64FDFF791E987994003AB388 /* LiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTableViewCell.xib; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				64FDFF7C1E988C3C003AB388 /* LiveModel.swift */,
+				64DA1D721EADD027005F3CFB /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				64FDFF7D1E988C3C003AB388 /* LiveModel.swift in Sources */,
 				64FDFF7A1E987994003AB388 /* LiveTableViewCell.swift in Sources */,
 				642E976D1E9761DE00C4F6EA /* Bundle+XMExtension.swift in Sources */,
+				64DA1D731EADD027005F3CFB /* UserModel.swift in Sources */,
 				642E97331E9755D200C4F6EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
