@@ -35,6 +35,7 @@
 		64D1C1741EA6445100687251 /* LiveRecordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D1C1721EA6445100687251 /* LiveRecordController.xib */; };
 		64D1C19F1EA795E900687251 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D1C19D1EA795E900687251 /* RecordViewController.swift */; };
 		64D1C1A01EA795E900687251 /* RecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D1C19E1EA795E900687251 /* RecordViewController.xib */; };
+		64DA1D711EADCF72005F3CFB /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64DA1D701EADCF72005F3CFB /* user.plist */; };
 		64EF8D5A1EA9D01800A7F207 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF8D591EA9D01800A7F207 /* UIImageExtension.swift */; };
 		64FDFF7A1E987994003AB388 /* LiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF781E987994003AB388 /* LiveTableViewCell.swift */; };
 		64FDFF7B1E987994003AB388 /* LiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FDFF791E987994003AB388 /* LiveTableViewCell.xib */; };
@@ -73,6 +74,7 @@
 		64D1C1721EA6445100687251 /* LiveRecordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveRecordController.xib; sourceTree = "<group>"; };
 		64D1C19D1EA795E900687251 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		64D1C19E1EA795E900687251 /* RecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordViewController.xib; sourceTree = "<group>"; };
+		64DA1D701EADCF72005F3CFB /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
 		64EF8D591EA9D01800A7F207 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		64FDFF781E987994003AB388 /* LiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTableViewCell.swift; sourceTree = "<group>"; };
 		64FDFF791E987994003AB388 /* LiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTableViewCell.xib; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 		642E975B1E97572200C4F6EA /* System */ = {
 			isa = PBXGroup;
 			children = (
+				64DA1D701EADCF72005F3CFB /* user.plist */,
 				647458D31EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.55.31.png */,
 				647458D41EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.53.00.png */,
 				642E97321E9755D200C4F6EA /* AppDelegate.swift */,
@@ -422,6 +425,7 @@
 				647458D51EA1ED5F00029BE9 /* Simulator Screen Shot 2017年4月15日 下午1.55.31.png in Resources */,
 				64D1C1741EA6445100687251 /* LiveRecordController.xib in Resources */,
 				64042D7D1EAC30BC0064D565 /* FilterImageViewController.xib in Resources */,
+				64DA1D711EADCF72005F3CFB /* user.plist in Resources */,
 				642E973A1E9755D200C4F6EA /* Assets.xcassets in Resources */,
 				642E97381E9755D200C4F6EA /* Main.storyboard in Resources */,
 				643544331EA1E5EF002D9CDE /* LiveShowViewController.xib in Resources */,
