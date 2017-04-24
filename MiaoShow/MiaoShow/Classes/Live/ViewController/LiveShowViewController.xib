@@ -32,7 +32,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHX-9k-MKV">
-                    <rect key="frame" x="5" y="25" width="150" height="40"/>
+                    <rect key="frame" x="5" y="25" width="169" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="an1-vx-Ebc">
                             <rect key="frame" x="5" y="5" width="30" height="30"/>
@@ -42,7 +42,7 @@
                             <state key="normal" backgroundImage="talk_sendgift"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzG-bP-YGf">
-                            <rect key="frame" x="105" y="7" width="40" height="27"/>
+                            <rect key="frame" x="124" y="7" width="40" height="27"/>
                             <color key="backgroundColor" red="1" green="0.61817233079583378" blue="0.76701828772616187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="Ftb-tE-9MM"/>
@@ -53,7 +53,7 @@
                             </state>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello 雪儿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipq-UB-opq">
-                            <rect key="frame" x="40" y="6" width="60" height="14"/>
+                            <rect key="frame" x="40" y="6" width="79" height="14"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -112,7 +112,7 @@
                     <state key="normal" image="talk_private"/>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="S6L-up-a67">
-                    <rect key="frame" x="167" y="25" width="203" height="40"/>
+                    <rect key="frame" x="186" y="25" width="184" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jZo-w8-R6Q">
                         <size key="itemSize" width="50" height="50"/>
@@ -151,7 +151,7 @@
                 <constraint firstAttribute="bottom" secondItem="0ae-2A-x6P" secondAttribute="bottom" constant="10" id="a2W-Z0-j7m"/>
                 <constraint firstItem="2hR-p9-fgx" firstAttribute="leading" secondItem="4ak-fD-98S" secondAttribute="trailing" constant="10" id="jjz-TB-4lF"/>
                 <constraint firstAttribute="trailing" secondItem="dMA-Id-U8W" secondAttribute="trailing" constant="80" id="kLj-V5-NiI"/>
-                <constraint firstItem="gHX-9k-MKV" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.4" id="lZt-im-hQb"/>
+                <constraint firstItem="gHX-9k-MKV" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.45" id="lZt-im-hQb"/>
                 <constraint firstItem="0ae-2A-x6P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="mFr-fj-Qlw"/>
                 <constraint firstItem="aAI-1X-SgD" firstAttribute="centerY" secondItem="2hR-p9-fgx" secondAttribute="centerY" id="nrV-3a-33a"/>
                 <constraint firstItem="4ak-fD-98S" firstAttribute="leading" secondItem="dbU-Ph-59T" secondAttribute="trailing" constant="10" id="qKg-yu-T1e"/>

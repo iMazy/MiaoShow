@@ -24,7 +24,7 @@ class UserCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layer.cornerRadius = self.contentView.bounds.width/2
+        layer.cornerRadius = 18
         layer.masksToBounds = true
         
     }

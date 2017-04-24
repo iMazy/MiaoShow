@@ -10,7 +10,7 @@ import UIKit
 import IJKMediaFramework
 import SDWebImage
 
-private let collectionReuse = "collectionIdentifier"
+private let collectionReuse = "userCell"
 private let tableViewReuse = "tableViewIdentifier"
 
 class LiveShowViewController: XMBaseViewController {
@@ -79,9 +79,10 @@ class LiveShowViewController: XMBaseViewController {
         collectionView.backgroundColor = .clear
         self.collectionView.setCollectionViewLayout(flowLayout, animated: true)
         collectionView.dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionReuse)
+//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionReuse)
         collectionView.showsHorizontalScrollIndicator = false
         
+        collectionView.register(UINib(nibName: "UserCollectionCell", bundle: nil), forCellWithReuseIdentifier: collectionReuse)
         
         tableView.backgroundColor = .clear
         tableView.dataSource = self
@@ -136,9 +137,8 @@ extension LiveShowViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionReuse, for: indexPath)
-        cell.backgroundColor = .red
-        cell.layer.cornerRadius = cell.bounds.size.width/2
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionReuse, for: indexPath) as! UserCollectionCell
+        cell.userM = userSource[indexPath.item]
         return cell
     }
 }
