@@ -14,7 +14,8 @@ class MeViewController: XMBaseViewController {
         return UITableView(frame: UIScreen.main.bounds, style: .grouped)
     }()
     
-    var array = [[String]]()
+    var imageArray = [[String]]()
+    var titleArray = [[String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,9 @@ class MeViewController: XMBaseViewController {
         
         view.addSubview(tableView)
         
-        array = [["我的喵币","直播间管理","我的短视频"],["我的收益","游戏中心"],["设置"]]
+        titleArray = [["我的喵币","直播间管理","我的短视频"],["我的收益","游戏中心"],["设置"]]
+        imageArray = [["my_coin","live_manager","shortVideo"],["income","game_center"],["setting"]]
+        
         
     }
 }
@@ -35,17 +38,18 @@ class MeViewController: XMBaseViewController {
 extension MeViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return array.count
+        return titleArray.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array[section].count
+        return titleArray[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         cell?.accessoryType = .disclosureIndicator
-        cell?.textLabel?.text = array[indexPath.section][indexPath.row]
+        cell?.imageView?.image = UIImage(named: imageArray[indexPath.section][indexPath.row])
+        cell?.textLabel?.text = titleArray[indexPath.section][indexPath.row]
         return cell!
     }
 }
