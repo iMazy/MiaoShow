@@ -21,7 +21,7 @@ class LiveTableViewCell: UITableViewCell {
 //                self.anchorIconView.image = newIcon
 //            }
             
-            
+          anchorStarImage.image = UIImage(named: "girl_star\(liveModel?.starlevel ?? 0)_40x19")
             anchorIconView.sd_setImage(with: URL(string: (liveModel?.bigpic)!)) { (image, _, _, _) in
                 let newIcon = image?.scaleRoundImage(size: CGSize(width: 46, height: 46), radius: 23)
                 self.anchorIconView.image = newIcon

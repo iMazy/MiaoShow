@@ -88,7 +88,7 @@
                     <rect key="frame" x="244" y="163" width="1" height="34"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="1" id="QuM-vM-QCB"/>
+                        <constraint firstAttribute="width" constant="0.5" id="QuM-vM-QCB"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOR-9S-AsA">
