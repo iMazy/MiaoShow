@@ -40,6 +40,8 @@
 		64DA1D761EADD595005F3CFB /* UserCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1D741EADD595005F3CFB /* UserCollectionCell.swift */; };
 		64DA1D771EADD595005F3CFB /* UserCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64DA1D751EADD595005F3CFB /* UserCollectionCell.xib */; };
 		64EF8D5A1EA9D01800A7F207 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF8D591EA9D01800A7F207 /* UIImageExtension.swift */; };
+		64FA029F1EAE3713006BD4B8 /* MeHeaderViwe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FA029E1EAE3713006BD4B8 /* MeHeaderViwe.swift */; };
+		64FA02A11EAE3724006BD4B8 /* MeHeaderViwe.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FA02A01EAE3724006BD4B8 /* MeHeaderViwe.xib */; };
 		64FDFF7A1E987994003AB388 /* LiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF781E987994003AB388 /* LiveTableViewCell.swift */; };
 		64FDFF7B1E987994003AB388 /* LiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FDFF791E987994003AB388 /* LiveTableViewCell.xib */; };
 		64FDFF7D1E988C3C003AB388 /* LiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FDFF7C1E988C3C003AB388 /* LiveModel.swift */; };
@@ -82,6 +84,8 @@
 		64DA1D741EADD595005F3CFB /* UserCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionCell.swift; sourceTree = "<group>"; };
 		64DA1D751EADD595005F3CFB /* UserCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCollectionCell.xib; sourceTree = "<group>"; };
 		64EF8D591EA9D01800A7F207 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		64FA029E1EAE3713006BD4B8 /* MeHeaderViwe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeHeaderViwe.swift; sourceTree = "<group>"; };
+		64FA02A01EAE3724006BD4B8 /* MeHeaderViwe.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeHeaderViwe.xib; sourceTree = "<group>"; };
 		64FDFF781E987994003AB388 /* LiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTableViewCell.swift; sourceTree = "<group>"; };
 		64FDFF791E987994003AB388 /* LiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTableViewCell.xib; sourceTree = "<group>"; };
 		64FDFF7C1E988C3C003AB388 /* LiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveModel.swift; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				642E976A1E975E6A00C4F6EA /* MeViewController.swift */,
+				64FA029E1EAE3713006BD4B8 /* MeHeaderViwe.swift */,
+				64FA02A01EAE3724006BD4B8 /* MeHeaderViwe.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 				64DA1D771EADD595005F3CFB /* UserCollectionCell.xib in Resources */,
 				64042D7D1EAC30BC0064D565 /* FilterImageViewController.xib in Resources */,
 				64DA1D711EADCF72005F3CFB /* user.plist in Resources */,
+				64FA02A11EAE3724006BD4B8 /* MeHeaderViwe.xib in Resources */,
 				642E973A1E9755D200C4F6EA /* Assets.xcassets in Resources */,
 				642E97381E9755D200C4F6EA /* Main.storyboard in Resources */,
 				643544331EA1E5EF002D9CDE /* LiveShowViewController.xib in Resources */,
@@ -498,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64042D591EAB180D0064D565 /* NetworkManager.swift in Sources */,
+				64FA029F1EAE3713006BD4B8 /* MeHeaderViwe.swift in Sources */,
 				642E976B1E975E6A00C4F6EA /* MeViewController.swift in Sources */,
 				642E97611E9757A800C4F6EA /* XMBaseViewController.swift in Sources */,
 				64042D7C1EAC30BC0064D565 /* FilterImageViewController.swift in Sources */,

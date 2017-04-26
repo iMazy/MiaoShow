@@ -9,27 +9,43 @@
 import UIKit
 
 class MeViewController: XMBaseViewController {
-
+    
+    let tableView: UITableView = {
+        return UITableView(frame: UIScreen.main.bounds, style: .grouped)
+    }()
+    
+    var array = [[String]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        view.addSubview(tableView)
+        
+        array = [["我的喵币","直播间管理","我的短视频"],["我的收益","游戏中心"],["设置"]]
+        
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension MeViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return array.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return array[section].count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell?.accessoryType = .disclosureIndicator
+        cell?.textLabel?.text = array[indexPath.section][indexPath.row]
+        return cell!
+    }
 }
