@@ -26,6 +26,8 @@
 		642E976B1E975E6A00C4F6EA /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E976A1E975E6A00C4F6EA /* MeViewController.swift */; };
 		642E976D1E9761DE00C4F6EA /* Bundle+XMExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E976C1E9761DE00C4F6EA /* Bundle+XMExtension.swift */; };
 		643544331EA1E5EF002D9CDE /* LiveShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 643544321EA1E5EF002D9CDE /* LiveShowViewController.xib */; };
+		6456B3F21EB4D2DD00EB22A4 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6456B3F11EB4D2DD00EB22A4 /* UserInfoView.swift */; };
+		6456B3F61EB4D32200EB22A4 /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6456B3F51EB4D32200EB22A4 /* UserInfoView.xib */; };
 		645CB63E1E9A6C57008B6671 /* LiveShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645CB63D1E9A6C57008B6671 /* LiveShowViewController.swift */; };
 		645CB6401E9A6C7F008B6671 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645CB63F1E9A6C7F008B6671 /* IJKMediaFramework.framework */; };
 		645CB6421E9A6CAF008B6671 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 645CB6411E9A6CAF008B6671 /* libz.tbd */; };
@@ -70,6 +72,8 @@
 		642E976A1E975E6A00C4F6EA /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		642E976C1E9761DE00C4F6EA /* Bundle+XMExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+XMExtension.swift"; sourceTree = "<group>"; };
 		643544321EA1E5EF002D9CDE /* LiveShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveShowViewController.xib; sourceTree = "<group>"; };
+		6456B3F11EB4D2DD00EB22A4 /* UserInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		6456B3F51EB4D32200EB22A4 /* UserInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
 		645CB63D1E9A6C57008B6671 /* LiveShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveShowViewController.swift; sourceTree = "<group>"; };
 		645CB63F1E9A6C7F008B6671 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		645CB6411E9A6CAF008B6671 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -232,6 +236,8 @@
 				64042D7B1EAC30BC0064D565 /* FilterImageViewController.xib */,
 				64DA1D741EADD595005F3CFB /* UserCollectionCell.swift */,
 				64DA1D751EADD595005F3CFB /* UserCollectionCell.xib */,
+				6456B3F11EB4D2DD00EB22A4 /* UserInfoView.swift */,
+				6456B3F51EB4D32200EB22A4 /* UserInfoView.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -444,6 +450,7 @@
 				64DA1D711EADCF72005F3CFB /* user.plist in Resources */,
 				64FA02A11EAE3724006BD4B8 /* MeHeaderViwe.xib in Resources */,
 				642E973A1E9755D200C4F6EA /* Assets.xcassets in Resources */,
+				6456B3F61EB4D32200EB22A4 /* UserInfoView.xib in Resources */,
 				642E97381E9755D200C4F6EA /* Main.storyboard in Resources */,
 				643544331EA1E5EF002D9CDE /* LiveShowViewController.xib in Resources */,
 			);
@@ -504,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6456B3F21EB4D2DD00EB22A4 /* UserInfoView.swift in Sources */,
 				64042D591EAB180D0064D565 /* NetworkManager.swift in Sources */,
 				64FA029F1EAE3713006BD4B8 /* MeHeaderViwe.swift in Sources */,
 				642E976B1E975E6A00C4F6EA /* MeViewController.swift in Sources */,
