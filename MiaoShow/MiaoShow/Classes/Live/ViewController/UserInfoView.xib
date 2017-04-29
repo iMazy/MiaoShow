@@ -102,35 +102,33 @@
                             <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZnI-68-LmY">
-                            <rect key="frame" x="0.0" y="66" width="392" height="3"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnI-68-LmY">
+                            <rect key="frame" x="0.0" y="64" width="392" height="1"/>
                             <color key="backgroundColor" red="0.76855343580245972" green="0.76868093013763428" blue="0.76852631568908691" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="kWv-7a-awW"/>
+                            </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoo-QF-mKk">
-                            <rect key="frame" x="24" y="77" width="31" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoo-QF-mKk">
+                            <rect key="frame" x="10" y="75" width="93" height="30"/>
                             <state key="normal" title="送礼">
                                 <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iil-5r-Ypo">
-                            <rect key="frame" x="101" y="77" width="31" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iil-5r-Ypo">
+                            <rect key="frame" x="103" y="75" width="93" height="30"/>
                             <state key="normal" title="私聊">
                                 <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vO-Ve-y83">
-                            <rect key="frame" x="210" y="77" width="32" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vO-Ve-y83">
+                            <rect key="frame" x="196" y="75" width="93" height="30"/>
                             <state key="normal" title="@TA">
                                 <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGE-Ct-kHi">
-                            <rect key="frame" x="312" y="77" width="31" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGE-Ct-kHi">
+                            <rect key="frame" x="289" y="75" width="93" height="30"/>
                             <state key="normal" title="更多">
                                 <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -138,17 +136,32 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="BGE-Ct-kHi" firstAttribute="top" secondItem="uoo-QF-mKk" secondAttribute="top" id="0ko-kP-U9e"/>
+                        <constraint firstItem="ZnI-68-LmY" firstAttribute="leading" secondItem="Bhf-Px-GwW" secondAttribute="leading" id="2zH-N6-4ya"/>
                         <constraint firstItem="nCm-Jl-1Vq" firstAttribute="top" secondItem="Bhf-Px-GwW" secondAttribute="top" constant="10" id="3q0-NP-bRa"/>
+                        <constraint firstAttribute="trailing" secondItem="BGE-Ct-kHi" secondAttribute="trailing" constant="10" id="746-dr-CqE"/>
+                        <constraint firstItem="2vO-Ve-y83" firstAttribute="leading" secondItem="iil-5r-Ypo" secondAttribute="trailing" id="7FU-1I-fW9"/>
+                        <constraint firstItem="ZnI-68-LmY" firstAttribute="top" secondItem="zCf-xX-9fA" secondAttribute="bottom" constant="10" id="9I6-hR-6U6"/>
                         <constraint firstItem="zCf-xX-9fA" firstAttribute="leading" secondItem="2Tv-nQ-pD2" secondAttribute="leading" id="Ag6-NH-VJS"/>
                         <constraint firstItem="zCf-xX-9fA" firstAttribute="trailing" secondItem="2Tv-nQ-pD2" secondAttribute="trailing" id="Bfh-g8-Iph"/>
+                        <constraint firstItem="uoo-QF-mKk" firstAttribute="top" secondItem="ZnI-68-LmY" secondAttribute="bottom" constant="10" id="IW2-CX-fwh"/>
                         <constraint firstAttribute="trailing" secondItem="2Tv-nQ-pD2" secondAttribute="trailing" constant="30" id="JKp-yv-7f2"/>
                         <constraint firstItem="mUO-PO-zID" firstAttribute="top" secondItem="nCm-Jl-1Vq" secondAttribute="bottom" constant="10" id="ShG-YA-SAo"/>
+                        <constraint firstAttribute="trailing" secondItem="ZnI-68-LmY" secondAttribute="trailing" id="WqP-oj-S61"/>
                         <constraint firstItem="2Tv-nQ-pD2" firstAttribute="width" secondItem="nCm-Jl-1Vq" secondAttribute="width" id="Wub-ub-OUN"/>
                         <constraint firstItem="2Tv-nQ-pD2" firstAttribute="leading" secondItem="nCm-Jl-1Vq" secondAttribute="trailing" constant="30" id="ZNT-s4-yXH"/>
+                        <constraint firstItem="2vO-Ve-y83" firstAttribute="top" secondItem="uoo-QF-mKk" secondAttribute="top" id="b4y-28-drz"/>
                         <constraint firstItem="mUO-PO-zID" firstAttribute="trailing" secondItem="nCm-Jl-1Vq" secondAttribute="trailing" id="caj-9w-ShS"/>
+                        <constraint firstItem="BGE-Ct-kHi" firstAttribute="leading" secondItem="2vO-Ve-y83" secondAttribute="trailing" id="cqc-dH-o5t"/>
                         <constraint firstItem="2Tv-nQ-pD2" firstAttribute="top" secondItem="Bhf-Px-GwW" secondAttribute="top" constant="10" id="dKI-x8-fzM"/>
+                        <constraint firstItem="iil-5r-Ypo" firstAttribute="top" secondItem="uoo-QF-mKk" secondAttribute="top" id="evt-lE-Bg1"/>
+                        <constraint firstItem="2vO-Ve-y83" firstAttribute="width" secondItem="uoo-QF-mKk" secondAttribute="width" id="fPx-Bb-AwP"/>
+                        <constraint firstItem="BGE-Ct-kHi" firstAttribute="width" secondItem="uoo-QF-mKk" secondAttribute="width" id="hnj-2n-RXe"/>
+                        <constraint firstItem="iil-5r-Ypo" firstAttribute="leading" secondItem="uoo-QF-mKk" secondAttribute="trailing" id="jSv-wI-B19"/>
                         <constraint firstItem="nCm-Jl-1Vq" firstAttribute="leading" secondItem="Bhf-Px-GwW" secondAttribute="leading" constant="30" id="kzR-tf-hf0"/>
+                        <constraint firstItem="iil-5r-Ypo" firstAttribute="width" secondItem="uoo-QF-mKk" secondAttribute="width" id="lC4-wy-bxa"/>
                         <constraint firstItem="mUO-PO-zID" firstAttribute="leading" secondItem="nCm-Jl-1Vq" secondAttribute="leading" id="lGh-tc-fYZ"/>
+                        <constraint firstItem="uoo-QF-mKk" firstAttribute="leading" secondItem="Bhf-Px-GwW" secondAttribute="leading" constant="10" id="ldq-ad-t99"/>
                         <constraint firstItem="zCf-xX-9fA" firstAttribute="top" secondItem="mUO-PO-zID" secondAttribute="top" id="mnm-Ge-Q6K"/>
                     </constraints>
                 </view>
@@ -206,7 +219,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="10" y="-97"/>
+            <point key="canvasLocation" x="-14" y="-79"/>
         </view>
     </objects>
     <resources>
