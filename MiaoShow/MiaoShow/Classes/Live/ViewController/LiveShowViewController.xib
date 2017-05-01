@@ -40,6 +40,9 @@
                                 <constraint firstAttribute="width" secondItem="an1-vx-Ebc" secondAttribute="height" id="mzi-QT-EWO"/>
                             </constraints>
                             <state key="normal" backgroundImage="talk_sendgift"/>
+                            <connections>
+                                <action selector="userIconClick" destination="-1" eventType="touchUpInside" id="iFS-oI-n67"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzG-bP-YGf">
                             <rect key="frame" x="124" y="7" width="40" height="27"/>

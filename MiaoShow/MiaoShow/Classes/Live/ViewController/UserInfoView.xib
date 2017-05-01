@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UserInfoView" customModule="MiaoShow" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="392" height="423"/>
+            <rect key="frame" x="0.0" y="0.0" width="392" height="422"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5o-pc-yJp">
@@ -76,7 +76,7 @@
                     </state>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bhf-Px-GwW">
-                    <rect key="frame" x="0.0" y="305" width="392" height="118"/>
+                    <rect key="frame" x="0.0" y="305" width="392" height="117"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注：27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCm-Jl-1Vq">
                             <rect key="frame" x="30" y="10" width="151" height="17"/>

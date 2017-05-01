@@ -15,7 +15,6 @@ private let tableViewReuse = "tableViewIdentifier"
 
 class LiveShowViewController: XMBaseViewController {
     
-    
     // 左上角内容视图
     @IBOutlet weak var topLeftContentView: UIView!
     // 用户图像
@@ -74,8 +73,6 @@ class LiveShowViewController: XMBaseViewController {
         self.userNameLabel.text = liveModel?.myname
         self.watchCountLabel.text = "\(liveModel?.allnum ?? 0)人"
         
-        
-        
         collectionView.backgroundColor = .clear
         self.collectionView.setCollectionViewLayout(flowLayout, animated: true)
         collectionView.dataSource = self
@@ -128,6 +125,29 @@ class LiveShowViewController: XMBaseViewController {
     @IBAction func leaveRoom() {
         _ = navigationController?.popViewController(animated: true)
     }
+    
+    
+    @IBAction func userIconClick() {
+        let infoView = Bundle.main.loadNibNamed("UserInfoView", owner: self, options: [:])?.last as! UserInfoView
+        
+        infoView.center = view.center
+        let x: CGFloat = 20
+        let h: CGFloat = 420
+        let w: CGFloat = view.bounds.width-2*x
+        let y: CGFloat = (view.bounds.height - h)/2
+        
+        infoView.frame = CGRect(x: x, y: y, width: w, height: h)
+        
+        self.view.addSubview(infoView)
+        self.view.bringSubview(toFront: infoView)
+        infoView.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+        infoView.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }) { (_) in
+        }
+        
+    }
+    
 }
 
 // MARK: - UICollectionViewDataSource,UICollectionViewDelegate
