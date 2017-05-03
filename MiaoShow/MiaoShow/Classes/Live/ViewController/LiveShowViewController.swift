@@ -30,6 +30,9 @@ class LiveShowViewController: XMBaseViewController {
     // 聊天展示视图
     @IBOutlet weak var tableView: UITableView!
     
+    var userInfoView: UserInfoView?
+    var coverViews: UIView?
+    
     var liveModel: LiveModel?
     lazy var userSource = [UserModel]()
     
@@ -128,7 +131,19 @@ class LiveShowViewController: XMBaseViewController {
     
     
     @IBAction func userIconClick() {
+        
+        let window = UIApplication.shared.keyWindow
+        let coverView = UIView(frame: (window?.bounds)!)
+        coverView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        let tapGes = UITapGestureRecognizer(target: self, action: #selector(dismissInfoView))
+        coverView.addGestureRecognizer(tapGes)
+        coverViews = coverView
+        window?.addSubview(coverView)
+        
+        
         let infoView = Bundle.main.loadNibNamed("UserInfoView", owner: self, options: [:])?.last as! UserInfoView
+        infoView.isUserInteractionEnabled = false
+        userInfoView = infoView
         
         infoView.center = view.center
         let x: CGFloat = 20
@@ -138,14 +153,27 @@ class LiveShowViewController: XMBaseViewController {
         
         infoView.frame = CGRect(x: x, y: y, width: w, height: h)
         
-        self.view.addSubview(infoView)
+        coverView.addSubview(infoView)
+        
         self.view.bringSubview(toFront: infoView)
         infoView.transform = CGAffineTransform(scaleX: 0, y: 0)
         UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
         infoView.transform = CGAffineTransform(scaleX: 1, y: 1)
-        }) { (_) in
-        }
+        })
         
+        
+    }
+    
+    func dismissInfoView() {
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            
+            self.userInfoView?.transform = CGAffineTransform(scaleX: 0, y: 0)
+            
+        }) { (_) in
+        
+            self.coverViews?.removeFromSuperview()
+        }
     }
     
 }
@@ -184,7 +212,7 @@ extension LiveShowViewController {
         // 发射器在xy平面的中心位置
         emitterLayer.emitterPosition = CGPoint(x: UIScreen.main.bounds.width-50, y: UIScreen.main.bounds.height-50)
         // 发射器的尺寸大小
-        emitterLayer.emitterSize = CGSize(width: 30, height: 30)
+        emitterLayer.emitterSize = CGSize(width: 50, height: 50)
         // 渲染模式
         emitterLayer.renderMode = kCAEmitterLayerUnordered
         // 开启三维效果
@@ -212,7 +240,7 @@ extension LiveShowViewController {
             // 粒子发射角度的容差
             stepCell.emissionRange = CGFloat(M_PI_2/6)
             // 缩放比例
-            stepCell.scale = 0.3
+            stepCell.scale = 0.5
             array.append(stepCell)
         }
         
