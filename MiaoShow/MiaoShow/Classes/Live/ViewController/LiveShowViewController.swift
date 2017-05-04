@@ -31,7 +31,7 @@ class LiveShowViewController: XMBaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var userInfoView: UserInfoView?
-    var coverViews: UIView?
+    var coverButton: UIButton?
     
     var liveModel: LiveModel?
     lazy var userSource = [UserModel]()
@@ -133,16 +133,19 @@ class LiveShowViewController: XMBaseViewController {
     @IBAction func userIconClick() {
         
         let window = UIApplication.shared.keyWindow
-        let coverView = UIView(frame: (window?.bounds)!)
-        coverView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-        let tapGes = UITapGestureRecognizer(target: self, action: #selector(dismissInfoView))
-        coverView.addGestureRecognizer(tapGes)
-        coverViews = coverView
-        window?.addSubview(coverView)
-        
+        let coverBtn = UIButton(frame: (window?.bounds)!)
+        coverBtn.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        coverBtn.addTarget(self, action: #selector(dismissInfoView), for: .touchUpInside)
+        coverButton = coverBtn
+        window?.addSubview(coverButton!)
         
         let infoView = Bundle.main.loadNibNamed("UserInfoView", owner: self, options: [:])?.last as! UserInfoView
-        infoView.isUserInteractionEnabled = false
+        infoView.userModel = liveModel
+        
+        infoView.userClose = {
+            self.dismissInfoView()
+        }
+        
         userInfoView = infoView
         
         infoView.center = view.center
@@ -151,11 +154,14 @@ class LiveShowViewController: XMBaseViewController {
         let w: CGFloat = view.bounds.width-2*x
         let y: CGFloat = (view.bounds.height - h)/2
         
+        
         infoView.frame = CGRect(x: x, y: y, width: w, height: h)
         
-        coverView.addSubview(infoView)
+        infoView.layer.cornerRadius = 10
+        infoView.layer.masksToBounds = true
         
-        self.view.bringSubview(toFront: infoView)
+        coverButton?.addSubview(infoView)
+        
         infoView.transform = CGAffineTransform(scaleX: 0, y: 0)
         UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
         infoView.transform = CGAffineTransform(scaleX: 1, y: 1)
@@ -172,7 +178,7 @@ class LiveShowViewController: XMBaseViewController {
             
         }) { (_) in
         
-            self.coverViews?.removeFromSuperview()
+            self.coverButton?.removeFromSuperview()
         }
     }
     

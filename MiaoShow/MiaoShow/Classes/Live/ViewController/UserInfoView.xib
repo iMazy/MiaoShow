@@ -178,9 +178,17 @@
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of1-PV-A5o">
+                    <rect key="frame" x="357" y="17" width="15" height="22"/>
+                    <state key="normal" image="user_close"/>
+                    <connections>
+                        <action selector="userCloseAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="WUd-Le-gZB"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.96069306135177612" green="0.9608502984046936" blue="0.96065956354141235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Of1-PV-A5o" secondAttribute="trailing" constant="20" id="21g-wu-wq7"/>
                 <constraint firstItem="P7J-jE-gTN" firstAttribute="centerY" secondItem="JQb-9s-kMg" secondAttribute="centerY" id="2pc-cx-J6N"/>
                 <constraint firstItem="Bhf-Px-GwW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3CS-HO-uX8"/>
                 <constraint firstItem="IfY-xZ-2Wr" firstAttribute="top" secondItem="Ckh-yE-wuN" secondAttribute="bottom" constant="10" id="6UF-PY-n4Y"/>
@@ -198,6 +206,7 @@
                 <constraint firstAttribute="trailing" secondItem="Bhf-Px-GwW" secondAttribute="trailing" id="QQW-S7-bLo"/>
                 <constraint firstItem="LMS-vk-Z6R" firstAttribute="top" secondItem="m5o-pc-yJp" secondAttribute="top" id="UYn-ee-bZm"/>
                 <constraint firstItem="m5o-pc-yJp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="VET-eK-ASe"/>
+                <constraint firstItem="Of1-PV-A5o" firstAttribute="centerY" secondItem="m5o-pc-yJp" secondAttribute="centerY" id="aqU-oX-hk1"/>
                 <constraint firstItem="NDP-4O-Ycq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bqK-0P-wVa"/>
                 <constraint firstItem="JQb-9s-kMg" firstAttribute="top" secondItem="Ckh-yE-wuN" secondAttribute="top" id="eeU-W5-M0x"/>
                 <constraint firstItem="m3j-8u-Phy" firstAttribute="width" secondItem="twy-ri-Nee" secondAttribute="width" id="fhK-7m-ztc"/>
@@ -219,6 +228,13 @@
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="anchorName" destination="NDP-4O-Ycq" id="M5W-Hw-4ug"/>
+                <outlet property="iconImageView" destination="wMS-09-Ho5" id="gta-8n-IgZ"/>
+                <outlet property="idxLabel" destination="Ckh-yE-wuN" id="qkN-0B-dTM"/>
+                <outlet property="location" destination="JQb-9s-kMg" id="DJv-ir-MoC"/>
+                <outlet property="signatures" destination="IfY-xZ-2Wr" id="V6c-cF-rU8"/>
+            </connections>
             <point key="canvasLocation" x="-14" y="-79"/>
         </view>
     </objects>
@@ -228,6 +244,7 @@
         <image name="report" width="20" height="16"/>
         <image name="seal" width="16" height="16"/>
         <image name="search_girl" width="15" height="15"/>
+        <image name="user_close" width="15" height="15"/>
         <image name="wave3" width="15" height="15"/>
     </resources>
 </document>
