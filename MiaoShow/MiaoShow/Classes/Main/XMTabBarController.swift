@@ -78,4 +78,11 @@ extension XMTabBarController: UITabBarControllerDelegate {
             return true
         }
     }
+    
+    /// 
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        let transition =  CATransition()
+        transition.type = kCATransitionFade
+        view.layer.add(transition, forKey: nil)
+    }
 }
